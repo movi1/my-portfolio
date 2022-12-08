@@ -2,8 +2,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { SocialIcon } from 'react-social-icons';
+// import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import  Icon  from './components/Icon'
 import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,7 +11,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Work from './components/Work';
-
 
 function App() {
   return (
@@ -25,11 +24,11 @@ function App() {
             <Nav.Link href="#features">My work</Nav.Link>
             <Nav.Link href="#pricing">Contact</Nav.Link>
           </Nav>
-          <div>
+          {/* <div>
             <a href="https://facebook.com">
               <FontAwesomeIcon icon={faFacebook}/>
             </a>
-          </div>
+          </div> */}
         </Container>
       </Navbar>
 
@@ -37,10 +36,14 @@ function App() {
 
       <Row />
       <Col />
+    
       <Work />
+      <Icon />
     </>
   );
 }
+
+
 
 
 export default App;
