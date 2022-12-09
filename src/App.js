@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import  Icon  from './components/Icon'
+import Icon from './components/Icon'
 import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,6 +11,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Work from './components/Work';
+import { useState } from 'react';
+import Example from './components/img';
+
 
 function App() {
   return (
@@ -24,24 +27,44 @@ function App() {
             <Nav.Link href="#features">My work</Nav.Link>
             <Nav.Link href="#pricing">Contact</Nav.Link>
           </Nav>
-          {/* <div>
-            <a href="https://facebook.com">
-              <FontAwesomeIcon icon={faFacebook}/>
-            </a>
-          </div> */}
         </Container>
       </Navbar>
-
-
-
+      <HooveringEffect title="test"></HooveringEffect>
       <Row />
       <Col />
-    
       <Work />
+   
       <Icon />
+   
     </>
+
   );
 }
+
+
+function HooveringEffect(props) {
+  // Initialize the hoovering state to false
+  const [isHoovering, setIsHoovering] = useState(false);
+
+  // Handle the hoovering action by updating the hoovering state
+  const handleHoovering = () => {
+    setIsHoovering(!isHoovering);
+  }
+
+  // Render the hoovering effect if the hoovering state is true
+  if (isHoovering) {
+    return <div onMouseLeave={handleHoovering} onMouseEnter={handleHoovering}>{props.title}</div>
+
+  }
+
+  return (
+    <div onMouseLeave={handleHoovering} onMouseEnter={handleHoovering}>
+      Hover over me to see the hoovering effect
+      console.log(hello)
+    </div>
+  );
+}
+
 
 
 

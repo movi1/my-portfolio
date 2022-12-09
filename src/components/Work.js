@@ -6,6 +6,8 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Image } from 'react-bootstrap';
+import { useState } from 'react';
+import example from './example.png';
 
 function Portfolio() {
   return (
@@ -14,7 +16,8 @@ function Portfolio() {
       <Row>
         <Col xs={12} md={6} lg={4}>
           <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://via.placeholder.com/150" />
+            <Card.Img className="card"  src={example} />
+         
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
               <Card.Text>
@@ -26,7 +29,7 @@ function Portfolio() {
           </Card></Col>
         <Col xs={12} md={6} lg={4}>
           <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://via.placeholder.com/150" />
+            <Card.Img className="card"  src="https://via.placeholder.com/150" />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
               <Card.Text>
@@ -37,7 +40,7 @@ function Portfolio() {
             </Card.Body>
           </Card></Col>
           <Col xs={12} md={6} lg={4}>     <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="https://via.placeholder.com/150" />
+          <Card.Img className="card"  src="https://via.placeholder.com/150" />
           <Card.Body>
             <Card.Title>Card Title</Card.Title>
             <Card.Text>
@@ -48,7 +51,7 @@ function Portfolio() {
           </Card.Body>
         </Card></Col>
         <Col>     <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="https://via.placeholder.com/150" />
+          <Card.Img className="card"  src="https://via.placeholder.com/150" />
           <Card.Body>
             <Card.Title>Card Title</Card.Title>
             <Card.Text>
@@ -59,7 +62,7 @@ function Portfolio() {
           </Card.Body>
         </Card></Col>
         <Col>     <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="https://via.placeholder.com/150" />
+          <Card.Img className="card"  src="https://via.placeholder.com/150" />
           <Card.Body>
             <Card.Title>Card Title</Card.Title>
             <Card.Text>
@@ -70,7 +73,7 @@ function Portfolio() {
           </Card.Body>
         </Card></Col>
         <Col>     <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="https://via.placeholder.com/150" />
+          <Card.Img className="card"  src="https://via.placeholder.com/150" />
           <Card.Body>
             <Card.Title>Card Title</Card.Title>
             <Card.Text>
