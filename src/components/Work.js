@@ -7,16 +7,17 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Image } from 'react-bootstrap';
 import { useState } from 'react';
-import example from './example.png';
+import { Pen } from './example.png';
 
 function Portfolio() {
   return (
 
     <Container>
       <Row>
+        
         <Col xs={12} md={6} lg={4}>
           <Card style={{ width: '18rem' }}>
-            <Card.Img className="card"  src={example} />
+            <Image className="card"  src="https://via.placeholder.com/150"  />
          
             <Card.Body>
               <Card.Title>Card Title</Card.Title>

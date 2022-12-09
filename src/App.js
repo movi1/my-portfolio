@@ -12,12 +12,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Work from './components/Work';
 import { useState } from 'react';
-import Example from './components/img';
+
+
 
 
 function App() {
   return (
     <>
+          <div style={{backgroundColor: "red"}}>
+      This page has a yellow background!
+     </div> 
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">Movi</Navbar.Brand>
@@ -33,13 +37,16 @@ function App() {
       <Row />
       <Col />
       <Work />
+    
    
       <Icon />
    
+    
     </>
 
   );
 }
+
 
 
 function HooveringEffect(props) {
