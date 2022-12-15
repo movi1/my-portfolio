@@ -12,6 +12,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Work from './components/Work';
 import { useState } from 'react';
+import Repo from './Repo';
 
 
 
@@ -19,6 +20,7 @@ import { useState } from 'react';
 function App() {
   return (
     <>
+   
           <div style={{backgroundColor: "red"}}>
       This page has a yellow background!
      </div> 
@@ -36,7 +38,8 @@ function App() {
       <HooveringEffect title="test"></HooveringEffect>
       <Row />
       <Col />
-      <Work />
+      <Repo />
+      {/* <Work /> */}
     
    
       <Icon />
