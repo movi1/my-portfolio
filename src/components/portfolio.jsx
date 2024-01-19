@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
-import exampleImage from './example.png';  // Import your image
+
 
 const Portfolio = () => {
   const projectData = [

@@ -15,7 +15,7 @@ const CustomNavbar = () => {
           <Nav.Link as={Link} to="/about-me">
             About me
           </Nav.Link>
-          <Nav.Link as={Link} to="/projects">
+          <Nav.Link as={Link} to="/portfolio">
             Projects
           </Nav.Link>
           <Nav.Link as={Link} to="/contact-me">
