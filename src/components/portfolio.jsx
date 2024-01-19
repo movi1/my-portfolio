@@ -13,6 +13,9 @@ const Portfolio = () => {
   ];
 
   return (
+    <div>
+    <h1>Portfolio</h1>
+ 
     <Container>
       <Row>
         {projectData.map(({ title, image, description }, index) => (
@@ -29,6 +32,7 @@ const Portfolio = () => {
         ))}
       </Row>
     </Container>
+    </div>
   );
 }
 
