@@ -1,7 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-/* home-page.css */
+
+
 
 body {
     margin: 0;
@@ -11,7 +12,11 @@ body {
 
 .container-fluid {
     height: 100%;
+    display: flex;
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
 }
+
 
 .text-center {
     padding: 20px;
@@ -19,25 +24,21 @@ body {
 
 .img-fluid {
     max-width: 100%;
-  
-}
+ }
 
-h1 {
+.text-center h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    color: #fff;
 }
 
-h4 {
+.text-center h4 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    color: #fff;
 }
 
-
-
-/* .bg-dark {
-    background-color: #000 !important;
-} */
-
-.text-light {
-    color: #fff !important;
+.bg-home {
+    background-color: #030d1d;
 }
+
