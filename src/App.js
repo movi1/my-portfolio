@@ -1,7 +1,6 @@
 
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react';
 import Portfolio from './components/portfolio';
