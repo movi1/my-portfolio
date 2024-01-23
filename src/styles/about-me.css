@@ -1,0 +1,25 @@
+body {
+    padding-top: 150px; /* Add padding to the top of the body to create space for the fixed navbar */
+  }
+  
+  .container-about {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;  
+  }
+  
+  h2 {
+    color: #007bff; /* Bootstrap's primary color */
+  }
+  
+  .font-weight-bold {
+    font-weight: bold;  
+  }
+  
+  .font-italic {
+    font-style: italic;
+  }
+  
+  .mt-4 {
+    margin-top: 1.5rem;  
+  }
