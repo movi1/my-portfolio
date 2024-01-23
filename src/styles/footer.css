@@ -11,7 +11,7 @@
   padding: 20px 0;
   text-align: center;
   min-height: 15vh;
-  position: absolute;
+  /* position:static; */
   bottom: 0;
   width: 100%;
 }

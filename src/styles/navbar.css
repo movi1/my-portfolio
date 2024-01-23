@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body {
   margin: 0;
   padding: 0;
@@ -10,11 +9,11 @@ body {
 .navbar-custom {
   background-color: #030d1d;
   color: #ffffff;
-  /* position: fixed; */
+  position:sticky;
   top: 0;
   width: 100%;
   z-index: 1000; 
-
+}
 .nav-link {
   color: white !important;
   font-size: 20px;
