@@ -8,6 +8,8 @@ import AboutMe from './components/about-me';
 import ContactMe from './components/contact-me';
 import Home from './components/home';
 import CustomNavbar from './components/navbar';
+import Footer from './components/footer';
+import SocialIcons from './components/icons';
 
 
 
@@ -22,6 +24,7 @@ function App() {
         <Route path="/about-me" element={<AboutMe />} />
         <Route path="/contact-me" element={<ContactMe />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

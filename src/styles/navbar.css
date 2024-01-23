@@ -1,8 +1,20 @@
-/* navbar.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
 
 .navbar-custom {
   background-color: #030d1d;
   color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
 }
 
 .nav-link {
