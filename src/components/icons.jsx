@@ -1,16 +1,20 @@
-import { SocialIcon } from "react-social-icons";
+// SocialIcons.js
 
-const Icon = () => (
-  //  icons on a vertical line using react-social-icons
-  <div className="mediaIcon" style={{ display: 'flex', flexDirection: 'column' }}>
-    <SocialIcon  url="https://facebook.com" style={{ display: 'inline-block', margin: '0.7em', width: 34, height: 34, }} bgColor="rgb(59, 89, 152" />
-    <SocialIcon url="https://instagram.com" style={{ display: 'inline-block', margin: '0.7em', width: 34, height: 34 }} bgColor="rgb(233, 68, 117)" />
-    <SocialIcon url="https://github.com/movi1.com" style={{ display: 'inline-block', margin: '0.7em', width: 34, height: 34 }} bgColor="rgb(36, 41, 46)" />
-    <SocialIcon url="https://www.linkedin.com/in/moira-corradini/" style={{ display: 'inline-block', margin: '0.7em', width: 34, height: 34 }} bgColor="rgb(0, 127, 177)" />
+import React from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-  </div>
+const SocialIcons = () => {
+  return (
+    <div className='social-icon'>
+      <a href="https://github.com/movi1" target="_blank" rel="noopener noreferrer">
+        <FaGithub size={30} />
+      </a>
 
-);
+      <a href="https://www.linkedin.com/in/moira-corradini/" target="_blank" rel="noopener noreferrer">
+        <FaLinkedin size={30} />
+      </a>
+    </div>
+  );
+};
 
-
-export default Icon;
+export default SocialIcons;
