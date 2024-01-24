@@ -10,6 +10,7 @@ import Home from './components/home';
 import CustomNavbar from './components/navbar';
 import Footer from './components/footer';
 import SocialIcons from './components/icons';
+import SkillBar from './components/skill-bar';
 
 
 
@@ -17,6 +18,7 @@ import SocialIcons from './components/icons';
 function App() {
   return (
     <BrowserRouter>
+    
       <CustomNavbar />
       <Routes>
         <Route path="/" element={<Home />} />

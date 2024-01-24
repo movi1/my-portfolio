@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 
 
 .container {
@@ -6,12 +6,12 @@
 }
 
 .footer {
-  background-color: #030d1d;
+
   color: #fff;
   padding: 20px 0;
   text-align: center;
   min-height: 15vh;
-  position: absolute;
+  /* position:static; */
   bottom: 0;
   width: 100%;
 }
