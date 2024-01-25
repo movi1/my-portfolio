@@ -1,39 +1,77 @@
 import React from "react";
-import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
+import '../styles/portfolio.css';
 
+// Projects array
+const projects = [
+  {
+    id: 1,
+    title: 'travel-bucket-list',
+    description: "A React project",
+    image: "project1.png",
+    link:"https://project1.com" 
+  },
+  {
+    id: 2,
+    title: 'Sum-Calculator',
+    description: "A Node.js project", 
+    image: "project2.jpg",
+    link:"https://project2.com"
+  },
+  {
+    id: 3,
+    title: 'login-logout-web-app',
+    description: "A Node.js project", 
+    image: "project2.jpg",
+    link:"https://project2.com"
+  },
+  {
+    id: 4,
+    title: 'sql-project-liftingweights',
+    description: "A Node.js project", 
+    image: "project2.jpg",
+    link:"https://project2.com"
+  },
+  {
+    id: 5,
+    title: 'My-character-game',
+    description: "A Node.js project", 
+    image: "project2.jpg",
+    link:"https://project2.com"
+  },  
+  {
+    id: 6,
+    title: 'london-underground-app',
+    description: "A Node.js project", 
+    image: "project2.jpg",
+    link:"https://project2.com"
+  }  
+];
 
-const Portfolio = () => {
-  const projectData = [
-    { title: 'travel-bucket-list', image: 'https://via.placeholder.com/150', description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.' },
-    { title: 'product-landing-page', image: 'https://via.placeholder.com/150', description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.' },
-    { title: 'tribute-page', image: 'https://via.placeholder.com/150', description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.' },
-    { title: 'Harry-Potter-Challenge', image: 'https://via.placeholder.com/150', description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.' },
-    { title: 'My-character-game', image: 'https://via.placeholder.com/150', description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.' },
-    { title: 'london-underground-app', image: 'https://via.placeholder.com/150', description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.' },
-  ];
-
+function Portfolio() {
   return (
-    <div>
-    <h1>Portfolio</h1>
- 
-    <Container>
-      <Row>
-        {projectData.map(({ title, image, description }, index) => (
-          <Col key={index} xs={12} md={6} lg={4}>
-            <Card style={{ width: '18rem' }}>
-              <Image className="card" src={image} />
-              <Card.Body>
-                <Card.Title>{title}</Card.Title>
-                <Card.Text>{description}</Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </Col>
+    <div className="container mt-5">
+      <h1 className="text-center">My Portfolio</h1>
+
+      <div className="row mt-4">
+        {projects.map(project => (
+          <div key={project.id} className="col-md-4 mb-4">
+            <div className="card">
+              <img src={project.image} className="card-img-top" alt={project.title} />
+              <div className="card-body">
+                <h5 className="card-title">{project.title}</h5>
+                <p className="card-text">{project.description}</p>
+                <a href={project.link} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                  View Project
+                </a>
+              </div>
+            </div>
+          </div>
         ))}
-      </Row>
-    </Container>
+      </div>
     </div>
   );
 }
+ export default Portfolio;
 
-export default Portfolio;
+
+

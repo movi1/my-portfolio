@@ -1,0 +1,18 @@
+
+.portfolio {
+    max-Width: "960px";
+    margin: "0 auto";
+    padding: "20px" ;
+    color: #ddd;
+  }
+  .projects {
+    display: "grid";
+    grid-template-columns: "repeat(3, 1fr)";
+    gap: "20px";
+  }
+  .project { 
+    background: "#f2f2f2";
+    padding: "20px";
+    border-radius: "10px"; 
+
+  }
