@@ -70,11 +70,9 @@ font-size: 20px;
   }
 }
 
+
 .about-content {
-      background: linear-gradient(to right,  #02071a, #294d7e);  
-  /* background: #f4f4f4; */
-  color: #f4f4f4;
-  border-radius: 10px;
+color: #ddd;
   flex: 1;  
-  padding: 30px;
+
 }
