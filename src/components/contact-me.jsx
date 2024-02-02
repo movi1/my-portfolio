@@ -1,72 +1,81 @@
 // ContactPage.js
 import React from 'react';
 import { useFormik } from 'formik';
-import '../styles/contact-me.css';
+import '../styles/contact-me.css'; // Make sure you have Bootstrap styles included in your project
 
-const ContactPage = () => {
+const ContactMe = () => {
   const formik = useFormik({
     initialValues: {
       name: '',
-      email: '',
+      email: ''
     },
     onSubmit: (values) => {
-      // Handle form submission, e.g., send an email
       console.log(values);
-    },
+    }
   });
 
   return (
-    <div className="form-container">
-      <h2>Contact Me</h2>
-      <form className="form" onSubmit={formik.handleSubmit}>
-        <label className="label">
-          Name:
-          <input
-            type="text"
-            name="name"
-            onChange={formik.handleChange}
-            value={formik.values.name}
-            className="input"
-          />
-        </label>
+    <div className="contact-page">
+      <h1 className="text-center mb-4">Contact Me</h1>
 
-        <label className="label">
-          Email:
-          <input
-            type="text"
-            name="email"
-            onChange={formik.handleChange}
-            value={formik.values.email}
-            className="input"
-          />
-        </label>
+      <div className="form-container p-4">
+        <form onSubmit={formik.handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="name" className="form-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              className="form-control"
+            />
+          </div>
 
-        <button type="submit" className="button">
-          Submit
-        </button>
-      </form>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">Email</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              className="form-control"
+            />
+          </div>
 
-      <div className="contact-info">
-        <p>Email: your.email@example.com</p>
-        <p>WhatsApp: +1234567890</p>
+          <div className="mb-3">
+            <label htmlFor="message" className="form-label">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formik.values.message}
+              onChange={formik.handleChange}
+              className="form-control"
+              rows="4"
+            />
+          </div>
+          <button type="submit" className="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+      <div className="contact-details p-4">
+        <p>Email: moiracorradini@gmail.com</p>
+        <p>WhatsApp: 07876245271</p>
+
         <p>
-          GitHub:{' '}
-          <a
-            href="https://github.com/your-github-username"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            github.com/your-github-username
+          GitHub:
+          <a href="https://github.com/movi1" target="_blank" rel="noopener noreferrer">
+            github.com/movi1
           </a>
         </p>
+
         <p>
-          LinkedIn:{' '}
-          <a
-            href="https://www.linkedin.com/in/your-linkedin-username"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            linkedin.com/in/your-linkedin-username
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/moira-corradini/" target="_blank" rel="noopener noreferrer">
+            www.linkedin.com/in/moira-corradini/
           </a>
         </p>
       </div>
@@ -74,5 +83,5 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default ContactMe;
 
