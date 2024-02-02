@@ -1,15 +1,21 @@
-// Project.jsx
 import React from 'react';
 import '../styles/portfolio.css';
 
-const Project = ({ title, description, image, link }) => {
+const Project = ({ id, title, technologies, description, image, link }) => {
   return (
-    
     <div className="project">
-           <h2 className="project-title">{title}</h2>
+      <h2 className="project-title">{title}</h2>
+      <div className="technologies">{technologies}</div>
       <div className="project-inner">
         <div className="project-front">
-          <img src={image} alt={title} className="project-image" />
+          {id === 6 ? (
+            <>
+              <div className="project-details">{description}</div>
+            
+            </>
+          ) : (
+            <img src={image} alt={title} className="project-image" />
+          )}
         </div>
         <div className="project-back">
           <p className="project-details">{description}</p>
@@ -18,7 +24,6 @@ const Project = ({ title, description, image, link }) => {
           </a>
         </div>
       </div>
-   
     </div>
   );
 };
