@@ -1,5 +1,5 @@
 import React from "react";
-import projects from './projectData';
+import projects from './projectData.jsx';
 import Project from './project.jsx';
 import { Card } from "react-bootstrap";
 import '../styles/portfolio.css';
