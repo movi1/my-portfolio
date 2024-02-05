@@ -1,88 +1,114 @@
-// ContactPage.js
 import React from 'react';
-import { useFormik } from 'formik';
-import '../styles/contact-me.css'; // Make sure you have Bootstrap styles included in your project
+import { useForm, ValidationError } from '@formspree/react';
+import '../styles/contact-me.css';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
-const ContactMe = () => {
-  const formik = useFormik({
-    initialValues: {
-      name: '',
-      email: ''
-    },
-    onSubmit: (values) => {
-      console.log(values);
-    }
-  });
+function ContactForm() {
+  const [state, handleSubmit, resetForm] = useForm("xrgnplvd");
+
+  if (state.succeeded) {
+    return (
+      <>
+        <p className="success-message">Thanks for contacting me!</p>
+        <button onClick={resetForm} className="reset-button">
+          Return to Form
+        </button>
+      </>
+    );
+  }
 
   return (
-    <div className="contact-page">
-      <h1 className="text-center mb-4">Contact Me</h1>
+    <>
+      {/* Contact Form with Heading and Intro */}
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <h1>Contact me</h1>
+            <p className="contact-intro">
+              Drop me a message through the form below!
+            </p>
 
-      <div className="form-container p-4">
-        <form onSubmit={formik.handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="name" className="form-label">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formik.values.name}
-              onChange={formik.handleChange}
-              className="form-control"
-            />
+            {/* Contact Information with Icons Inside the Form */}
+            <form onSubmit={handleSubmit} className="contact-form">
+              {/* Form Fields */}
+              <div className="form-group">
+                <label htmlFor="name">Full Name</label>
+                <input
+                  id="name"
+                  type="name"
+                  name="name"
+                  className="form-control"
+                  placeholder="Tell me your full name"
+                />
+                <ValidationError
+                  prefix="name"
+                  field="name"
+                  errors={state.errors}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">Email Address</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  className="form-control"
+                  placeholder="you@something.com"
+                />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  className="form-control"
+                  placeholder="Enter Your Message"
+                  rows="4"
+                />
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                />
+              </div>
+
+              {/* Submit Button */}
+              <button type="submit" disabled={state.submitting} className="custom-btn-primary">
+                Submit
+              </button>
+            </form>
           </div>
 
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label">Email</label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              value={formik.values.email}
-              onChange={formik.handleChange}
-              className="form-control"
-            />
+          {/* Contact Information Section */}
+          <div className="col-md-6 mx-auto">
+            <div className="contact-info">
+              <h2>Contact Information</h2>
+              <p>
+                <span className="contact-label">Email:</span>
+                <a href="mailto:moiracorradini@gmail.com"><FaEnvelope className="icon" />moiracorradini@gmail.com</a>
+              </p>
+              <p>
+                <span className="contact-label">LinkedIn:</span>
+                <a href="https://www.linkedin.com/in/moira-corradini/" target="_blank" rel="noopener noreferrer"><FaLinkedin className="icon" />moira-corradini</a>
+              </p>
+              <p>
+                <span className="contact-label">GitHub:</span>
+                <a href="https://github.com/movi1" target="_blank" rel="noopener noreferrer"><FaGithub className="icon" />movi</a>
+              </p>
+            </div>
           </div>
 
-          <div className="mb-3">
-            <label htmlFor="message" className="form-label">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formik.values.message}
-              onChange={formik.handleChange}
-              className="form-control"
-              rows="4"
-            />
-          </div>
-          <button type="submit" className="custom-btn-primary">Submit</button>
-
-        </form>
+        </div>
       </div>
-
-      <div className="contact-details p-4">
-        <p>Email: moiracorradini@gmail.com</p>
-        <p>WhatsApp: 07876245271</p>
-
-        <p>
-          GitHub:
-          <a href="https://github.com/movi1" target="_blank" rel="noopener noreferrer">
-            github.com/movi1
-          </a>
-        </p>
-
-        <p>
-          LinkedIn:
-          <a href="https://www.linkedin.com/in/moira-corradini/" target="_blank" rel="noopener noreferrer">
-            www.linkedin.com/in/moira-corradini/
-          </a>
-        </p>
-      </div>
-    </div>
+    </>
   );
-};
+}
 
-export default ContactMe;
-
+export default ContactForm;

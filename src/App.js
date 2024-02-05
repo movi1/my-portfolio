@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react';
 import Portfolio from './components/portfolio';
 import AboutMe from './components/about-me';
-import ContactMe from './components/contact-me';
+import ContactForm from './components/contact-me';
 import Home from './components/home';
 import CustomNavbar from './components/navbar';
 import Footer from './components/footer';
@@ -24,7 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about-me" element={<AboutMe />} />
-        <Route path="/contact-me" element={<ContactMe />} />
+        <Route path="/contact-me" element={ <ContactForm />} />
       </Routes>
       <Footer />
     </BrowserRouter>
