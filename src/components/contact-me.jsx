@@ -57,7 +57,8 @@ const ContactMe = () => {
               rows="4"
             />
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className="custom-btn-primary">Submit</button>
+
         </form>
       </div>
 
