@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink, Element } from 'react-scroll';
 import '../styles/navbar.css';
 
 const CustomNavbar = () => {
@@ -16,15 +17,17 @@ const CustomNavbar = () => {
       <Navbar.Toggle aria-controls="navbar-nav" />
       <Navbar.Collapse id="navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link as={Link} to="/about-me" className="nav-link " >
+          <ScrollLink to="about-me" smooth={true} duration={500} className="nav-link ">
             About me
-          </Nav.Link>
-          <Nav.Link as={Link} to="/portfolio" className="nav-link ">
+          </ScrollLink>
+          <ScrollLink to="portfolio" smooth={true} duration={500} className="nav-link ">
             Projects
-          </Nav.Link>
-          <Nav.Link as={Link} to="/contact-me" className="nav-link">
+          </ScrollLink>
+          <ScrollLink to="contact-me" smooth={true} duration={500} className="nav-link ">
             Contact me
-          </Nav.Link>
+          </ScrollLink>
+
+
         </Nav>
       </Navbar.Collapse>
     </Navbar>
