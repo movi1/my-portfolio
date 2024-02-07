@@ -6,7 +6,7 @@ import '../styles/footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" name="footer">
       <div className="container">
         <Link to="/" className="footer-brand">
           <img

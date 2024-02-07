@@ -20,7 +20,7 @@ function ContactForm() {
   return (
     <>
       {/* Contact Form with Heading and Intro */}
-      <div className="container">
+      <div className="container " name="contact-me">
         <div className="row">
           <div className="col-md-6">
             <h1>Contact me</h1>
