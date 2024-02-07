@@ -1,10 +1,10 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Link as ScrollLink, Element } from 'react-scroll';
+import { Link as ScrollLink} from 'react-scroll-to';
 import '../styles/navbar.css';
 
-const CustomNavbar = () => {
+export const CustomNavbar = () => {
   return (
     <Navbar className='navbar-custom' variant="light" expand="md">
       <Link to="/" className="navbar-brand">
@@ -17,23 +17,22 @@ const CustomNavbar = () => {
       <Navbar.Toggle aria-controls="navbar-nav" />
       <Navbar.Collapse id="navbar-nav">
         <Nav className="ml-auto">
-          <ScrollLink to="about-me" smooth={true} duration={500} className="nav-link ">
+          <ScrollLink to="about-me" smooth duration={500} className="nav-link ">
             About me
           </ScrollLink>
-          <ScrollLink to="portfolio" smooth={true} duration={500} className="nav-link ">
+          <ScrollLink to="portfolio" smooth duration={500} className="nav-link ">
             Projects
           </ScrollLink>
-          <ScrollLink to="contact-me" smooth={true} duration={500} className="nav-link ">
+          <ScrollLink to="contact-me" smooth duration={500} className="nav-link ">
             Contact me
           </ScrollLink>
-
-
         </Nav>
       </Navbar.Collapse>
     </Navbar>
   );
 };
 
-export default CustomNavbar;
+
+
 
 
