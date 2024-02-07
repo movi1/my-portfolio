@@ -1,52 +1,81 @@
-/* Adjust the styles for portfolio-page in home-page.css */
+
+/* portfolio.css */
+
 .portfolio-page {
   text-align: center;
-  min-height: 100vh;
-  padding-top: 80px;
   display: flex;
-  flex-direction: column;
+
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  overflow: hidden; /* Ensure no overflow */
+}
+
+#title-portfolio {
+  margin-top: 60px; 
+  position: absolute;
+  top: 0;
+
+
 }
 
 
 /* Adjust the styles for projects-container in home-page.css */
 .projects-container {
   display: flex;
-  flex-wrap: wrap; /* Allow projects to wrap to the next row */
+
+  align-items: center;
   justify-content: center;
-  margin-top: 60px;
- 
+  height: 100%;
+
 
 }
 
 /* Adjust the styles for each project to control their width */
 .project {
-  /* width: calc(50% - 50px); */
-  height: 400px;
-  width: 400px;
-  perspective: 1000px;
-  transition: transform 0.5s;
-  position: relative;
-  overflow: hidden;
-  margin: 60px;
-  flex-grow: 1; 
 
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+  position:relative;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+
+ } 
+.swiper-container {
+  width: 60%; 
+  height: 60vh; 
+}
+
+.project {
+  opacity: 1; /* Initial opacity */
+  transition: opacity 0.5s; /* Add a transition for smooth opacity changes */
 
 }
 
+.project:hover {
+  opacity: 1; /* Adjust the opacity value based on your preference */
+}
+
+
 .project:hover .project-inner {
-  transform: rotateY(180deg);
+  transform: rotateX(0deg) translateY(-100%);
 }
 
 .project-inner {
   width: 100%;
   height: 100%;
+
+  transform-origin: 50% 50%;
   transform-style: preserve-3d;
   transition: transform 0.5s;
-  transform: rotateY(0deg);
-  
+  transform: rotateX(0deg) translateY(0); 
+
+
 }
+
+
 
 .project-front,
 .project-back {
@@ -56,51 +85,73 @@
   backface-visibility: hidden;
 }
 
+
+.project:hover .project-back {
+  transform: rotateX(0deg) translateY(100%); /* Show the back side on hover */
+}
+
+
+
+
 .project img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+
+  width: 80%; /* Ensure the image takes up the full width of its container */
+  height: 70%; /* Set a fixed height for the images */
+  object-fit: cover; /* Preserve the aspect ratio while covering the entire container */
   border-radius: 8px;
+}
+
+
+.project-front {
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 250px;
+  background: radial-gradient( #030d1d, #1e3d69, #082149, #02071a);
+
+
+
 }
 
 .project-back {
   transform: rotateY(180deg);
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
   border-radius: 8px;
-  background: conic-gradient(from -45deg at 50% 50%, #02071a, #030d1d, #0a1f3d, #030d1d, #02071a);
+  margin-left: 250px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(247, 241, 241, 0.897);
+  box-shadow: 8px 4px 8px rgba(  0.897,0.5,5, 29,);
+  background: radial-gradient(rgba(3, 13, 29, 0.6), rgba(10, 31, 61, 0.5), rgba(3, 13, 29, 0.5), rgba(2, 7, 26, 0.5));
+
+
 }
 
 .project-link {
   color: #1491e4;
   font-weight: bold;
-  margin-top: 10px;
-  font-size: 1.2em;
+  font-size: 20px;
 }
 
 .project-title {
-  font-size: 1.5em;
-  color: #084913;
 
-  font-style: italic;
+  font-size: 25px;
+  color: #ddd;
+  margin-top: 50px;
 
 }
-#title-project {
-  margin-top: 70px;
-}
+
 
 .project-details {
-  font-size: 1em;
+  margin-top: 25px;
+  font-size: 15px;
   color: #ddd;
-  margin-top: 10px;
+  line-height: 25px;
+
 }
 
 .technologies {
-  font-size: 0.7em;
+  font-size: 15px;
   color: #ddd;
+
+  
+
 }

@@ -4,7 +4,9 @@ import { Col } from 'react-bootstrap';
 
 const Project = ({ id, title, technologies, description, image, link }) => {
   return (
-    <Col xs={12} sm={6} md={6} lg={6} xl={6}>
+
+    <Col xs={12} sm={6} md={6} lg={6} xl={6}  className="d-flex justify-content-center align-items-center">
+
       <div className="project">
         <div className="project-inner">
           <div className="project-info">
