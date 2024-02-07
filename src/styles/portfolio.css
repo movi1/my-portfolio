@@ -1,3 +1,4 @@
+
 /* portfolio.css */
 
 .portfolio-page {
@@ -15,17 +16,24 @@
   position: absolute;
   top: 0;
 
+
 }
 
+
+/* Adjust the styles for projects-container in home-page.css */
 .projects-container {
   display: flex;
+
   align-items: center;
   justify-content: center;
   height: 100%;
 
+
 }
 
+/* Adjust the styles for each project to control their width */
 .project {
+
   width: 500px;
   height: 500px;
   perspective: 1000px;
@@ -43,6 +51,7 @@
 .project {
   opacity: 1; /* Initial opacity */
   transition: opacity 0.5s; /* Add a transition for smooth opacity changes */
+
 }
 
 .project:hover {
@@ -57,10 +66,12 @@
 .project-inner {
   width: 100%;
   height: 100%;
+
   transform-origin: 50% 50%;
   transform-style: preserve-3d;
   transition: transform 0.5s;
   transform: rotateX(0deg) translateY(0); 
+
 
 }
 
@@ -72,7 +83,6 @@
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
-
 }
 
 
@@ -84,6 +94,7 @@
 
 
 .project img {
+
   width: 80%; /* Ensure the image takes up the full width of its container */
   height: 70%; /* Set a fixed height for the images */
   object-fit: cover; /* Preserve the aspect ratio while covering the entire container */
@@ -98,16 +109,19 @@
   background: radial-gradient( #030d1d, #1e3d69, #082149, #02071a);
 
 
+
 }
 
 .project-back {
   transform: rotateY(180deg);
   text-align: center;
+
   border-radius: 8px;
   margin-left: 250px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 8px 4px 8px rgba(  0.897,0.5,5, 29,);
   background: radial-gradient(rgba(3, 13, 29, 0.6), rgba(10, 31, 61, 0.5), rgba(3, 13, 29, 0.5), rgba(2, 7, 26, 0.5));
+
 
 }
 
@@ -118,9 +132,11 @@
 }
 
 .project-title {
+
   font-size: 25px;
   color: #ddd;
   margin-top: 50px;
+
 }
 
 
@@ -135,5 +151,7 @@
 .technologies {
   font-size: 15px;
   color: #ddd;
+
   
+
 }

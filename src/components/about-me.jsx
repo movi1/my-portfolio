@@ -22,7 +22,7 @@ const skills = [
 const AboutMe = () => {
   return (
 
-    <div className="container">
+    <div className="container "  name="about-me">
       <div className="programming-skills">
         <h1 className="mt-4">Programming Language Skill:</h1>
         <div className="skill-list">

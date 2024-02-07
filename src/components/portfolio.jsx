@@ -6,6 +6,7 @@ import 'swiper/css';
 
 import projects from './projectData.jsx';
 import Project from './project.jsx';
+
 import '../styles/portfolio.css';
 
 
@@ -23,6 +24,7 @@ const Portfolio = () => {
       >
         {projects.map((project) => (
           <SwiperSlide key={project.id}>
+
             <Project
               title={project.title}
               technologies={project.technologies}
@@ -30,10 +32,12 @@ const Portfolio = () => {
               image={project.image}
               link={project.link}
             />
+
           </SwiperSlide>
         ))}
       </Swiper>
     </div>
   );
 };
+
 export default Portfolio;
