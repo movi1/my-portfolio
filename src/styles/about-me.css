@@ -1,9 +1,10 @@
 .container {
- min-height: 100vh;
+
   margin: 0 auto;  
   display: flex;
   gap: 30px;
-  padding: 30px;
+  padding: 50px;
+ 
 }
 
 h1 {
@@ -14,8 +15,11 @@ h1 {
   background: conic-gradient(from -45deg at 50% 50%, #02071a, #030d1d, #0a1f3d, #030d1d, #02071a);
   border-radius: 10px;
   flex: 1;
-  padding: 30px;  
+  padding-top: 80px; 
+  margin: 50px;
+  min-height: 100vh;
 }
+
 
 .skill-list {
   display: flex;
@@ -74,5 +78,8 @@ font-size: 20px;
 .about-content {
 color: #ddd;
   flex: 1;  
+  padding-top: 80px;
+  margin: 50px;
+  min-height: 100vh;
 
 }

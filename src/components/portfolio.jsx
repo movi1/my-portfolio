@@ -7,7 +7,7 @@ import '../styles/portfolio.css';
 const Portfolio = () => {
   return (
     <div className="portfolio-page" name="portfolio">
-      <h1>My Portfolio</h1>
+      <h1 id="title-project">My Portfolio</h1>
       <Row className="projects-container">
         {projects.map((project) => (
           <Col key={project.id} xs={12} sm={6} md={4} lg={4} xl={4}>
