@@ -1,10 +1,10 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Link as ScrollLink} from 'react-scroll-to';
+import { Link as ScrollLink } from 'react-scroll';
 import '../styles/navbar.css';
 
-export const CustomNavbar = () => {
+ const CustomNavbar = () => {
   return (
     <Navbar className='navbar-custom' variant="light" expand="md">
       <Link to="/" className="navbar-brand">
@@ -32,7 +32,7 @@ export const CustomNavbar = () => {
   );
 };
 
-
+export default CustomNavbar;
 
 
 
