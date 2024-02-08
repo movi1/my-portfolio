@@ -15,10 +15,11 @@ import SkillBar from './components/skill-bar';
 
 
 
+
 function App() {
   return (
     <BrowserRouter>
-    
+
       <CustomNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
