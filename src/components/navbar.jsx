@@ -23,6 +23,9 @@ import '../styles/navbar.css';
           <ScrollLink to="portfolio" smooth duration={500} className="nav-link ">
             Projects
           </ScrollLink>
+          <ScrollLink to="certificate" smooth duration={500} className="nav-link ">
+          Certificates
+          </ScrollLink>
           <ScrollLink to="contact-me" smooth duration={500} className="nav-link ">
             Contact me
           </ScrollLink>

@@ -4,7 +4,7 @@ const projects = [
     id: 1,
     title: 'Travel Bucket List',
     technologies: "Node.js, Express, Prisma, React, Bootstrap",
-    description: "The Travel Bucket List app helps users organize and track travel dreams. Built with Node.js, Express, Prisma, and React, it provides authentication, weather information, packing lists, testimonials, and a responsive design.",
+    description: "The Travel Bucket List app, our CFGdegree final group project, uses Node.js, Express, Prisma, and React to help users organize and track their travel dreams. Packed with features like authentication, weather updates, packing lists, testimonials, and a responsive design,  it ensures  every journey memorable.",
     image: "/images/travel.PNG",
     link: "https://github.com/movi1/TravelBucketList"
   },
