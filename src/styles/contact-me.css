@@ -1,75 +1,93 @@
 .container {
-  min-height: 100vh;
+  height: 100vh;
+  max-width: 800px;
+  margin: 0 auto; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+/* Form Styles */
+
 .contact-intro {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
   color: #ddd;
 }
-.contact-form {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.form-group {
-  margin-bottom: 20px;
-}
-.form-group label {
-font-weight:bold;
-font-size: 12px;
+
+.contact-form, 
+.contact-info {
+  width: 45%;
+  margin: 0 20px;
 }
 
-button {
-  background-color: #1d314d;
-  color: #fff;
-  padding: 8px 10px;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
 }
-button:hover {
+
+.form-control:focus {
+  outline: none;
+  border-color: #3a5b88;
+}
+
+label {
+  font-weight: 600;
+}
+
+button[type="submit"] {
   background-color: #3a5b88;
-}
-
-.reset-button {
-  background-color: #3a5b88;
-  color: #fff;
-  padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.reset-button:hover {
+button[type="submit"]:hover {
   background-color: #1d314d;
 }
 
-.success-message {
-  color: #3a5b88;
-  font-weight: bold;
-  font-size: 18px;
+/* Contact Info Styles */
+
+.contact-info {
+  background-color: #1d314d;
+  color: white;
 }
 
-.contact-info h2 {
-  font-size: 24px;
-text-align: center;
-  color: #f4f4f4;
+.contact-info p {
+  margin-bottom: 25px;
 }
-
 
 .contact-label {
-  margin-right: 20px;
-  color: #f4f4f4;
+  font-weight: 600;
+  margin-right: 10px;
 }
 
-
-
-
 .icon {
-  margin-right: 8px;
   vertical-align: middle;
+  margin: 6px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
