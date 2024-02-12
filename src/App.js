@@ -11,7 +11,7 @@ import CustomNavbar from './components/navbar';
 import Footer from './components/footer';
 import SocialIcons from './components/icons';
 import SkillBar from './components/skill-bar';
-
+import Certificates from './components/certificate';
 
 
 
@@ -23,9 +23,10 @@ function App() {
       <CustomNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        {/* <Route path="/about-me" element={<AboutMe />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/about-me" element={<AboutMe />} />
-        <Route path="/contact-me" element={ <ContactForm />} />
+        <Route path="/certificate" element={<Certificates />} />
+        <Route path="/contact-me" element={ <ContactForm />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>

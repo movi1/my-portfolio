@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import '../styles/navbar.css';
 
- const CustomNavbar = () => {
+const CustomNavbar = () => {
   return (
     <Navbar className='navbar-custom' variant="light" expand="md">
       <Link to="/" className="navbar-brand">
@@ -24,8 +24,9 @@ import '../styles/navbar.css';
             Projects
           </ScrollLink>
           <ScrollLink to="certificate" smooth duration={500} className="nav-link ">
-          Certificates
+            Certificates
           </ScrollLink>
+
           <ScrollLink to="contact-me" smooth duration={500} className="nav-link ">
             Contact me
           </ScrollLink>
