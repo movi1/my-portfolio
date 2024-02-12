@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden; /* Ensure no overflow */
+  overflow: visible; /* Ensure no overflow */
 }
 
 #title-portfolio {

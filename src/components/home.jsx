@@ -6,6 +6,7 @@ import Portfolio from './portfolio';
 import AboutMe from './about-me';
 import ContactForm from './contact-me';
 import Footer from './footer';
+import Certificates from './certificate';
 
 const HomePage = () => {
   return (
@@ -32,7 +33,7 @@ const HomePage = () => {
       </div>
       <AboutMe></AboutMe>
       <Portfolio></Portfolio>
-      
+      <Certificates></Certificates>
       <ContactForm></ContactForm>
  
     </>

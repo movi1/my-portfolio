@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/portfolio.css';
 import { Col } from 'react-bootstrap';
 
-const Project = ({ id, title, technologies, description, image, link }) => {
+const Project = ({  title, technologies, description, image, link }) => {
   
   return (
 
