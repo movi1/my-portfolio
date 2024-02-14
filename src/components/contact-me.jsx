@@ -5,19 +5,17 @@ import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function ContactForm() {
   const [state, handleSubmit, resetForm] = useForm("xrgnplvd");
-
   if (state.succeeded) {
     return (
-      <>
+      <div className="container-contact" name="contact-me">
         <p className="success-message">Thanks for contacting me!</p>
         <button onClick={resetForm} className="reset-button">
           Return to Form
         </button>
-      </>
+      </div>
     );
-    return null;
   }
- 
+
 
   return (
     <div className="container-contact" name="contact-me">
