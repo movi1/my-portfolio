@@ -35,7 +35,7 @@ const HomePage = () => {
       <Portfolio></Portfolio>
       <Certificates></Certificates>
       <ContactForm></ContactForm>
- 
+
     </>
   );
 };
