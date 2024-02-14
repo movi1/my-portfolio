@@ -15,114 +15,116 @@ function ContactForm() {
         </button>
       </>
     );
+    return null;
   }
+ 
+
   return (
-    <>
-      {/* Contact Form with Heading and Intro */}
-      <div className='main-container'>
-        <div className="container-contact" name="contact-me">
-          <div className="row">
-
-            {/* Form Fields */}
-            <h1>Contact me</h1>
-            <p className="contact-intro">
-              Drop me a message through the form below!
-            </p>
-            <form onSubmit={handleSubmit} className="contact-form col-md-6 col-12">
-              <div className="form-group">
-                <label htmlFor="name">Full Name</label>
-                <input
-                  id="name"
-                  type="name"
-                  name="name"
-                  className="form-control"
-                  placeholder="Tell me your full name"
-                />
-                <ValidationError
-                  prefix="name"
-                  field="name"
-                  errors={state.errors}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="email">Email Address</label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  className="form-control"
-                  placeholder="you@something.com"
-                />
-                <ValidationError
-                  prefix="Email"
-                  field="email"
-                  errors={state.errors}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  className="form-control"
-                  placeholder="Enter Your Message"
-                  rows="4"
-                />
-                <ValidationError
-                  prefix="Message"
-                  field="message"
-                  errors={state.errors}
-                />
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={state.submitting}
-                className="custom-btn-primary"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
-
-          {/* Contact Information Section */}
-          <div className='container-information'>
-            <div className="contact-info col-md-6 col-12 mx-auto">
-              <h2>Contact Information</h2>
-              <p>
-                <span className="contact-label">Email:</span>
-                <a href="mailto:moiracorradini@gmail.com">
-                  <FaEnvelope className="icon" /> moiracorradini@gmail.com
-                </a>
-              </p>
-              <p>
-                <span className="contact-label">LinkedIn:</span>
-                <a
-                  href="https://www.linkedin.com/in/moira-corradini/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedin className="icon" /> moira-corradini
-                </a>
-              </p>
-              <p>
-                <span className="contact-label">GitHub:</span>
-                <a
-                  href="https://github.com/movi1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub className="icon" /> movi
-                </a>
-              </p>
+    <div className="container-contact" name="contact-me">
+      <div className="row">
+        <div className="col-md-6 col-12">
+          {/* Form Fields */}
+          <h1>Contact me</h1>
+          <p className="contact-intro">
+            Drop me a message through the form below!
+          </p>
+          <form onSubmit={handleSubmit} className="contact-form">
+            <div className="form-group">
+              <label htmlFor="name">Full Name</label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                className="form-control"
+                placeholder="Tell me your full name"
+              />
+              <ValidationError
+                prefix="name"
+                field="name"
+                errors={state.errors}
+              />
             </div>
+
+            <div className="form-group">
+              <label htmlFor="email">Email Address</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                className="form-control"
+                placeholder="you@something.com"
+              />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                className="form-control"
+                placeholder="Enter Your Message"
+                rows="4"
+              />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              disabled={state.submitting}
+              className="btn btn-primary"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+
+        {/* Contact Information Section */}
+        <div className="col-md-6 col-12 mt-md-0 mt-4">
+          <div className="contact-info">
+            <h2>Contact Information</h2>
+            <p>
+              <span className="contact-label">Email:</span>
+              <a href="mailto:moiracorradini@gmail.com"  className="link-contact-info">
+             
+                <FaEnvelope size={20} className="icon" /> moiracorradini@gmail.com
+              </a>
+            </p>
+            <p>
+              <span className="contact-label">LinkedIn:</span>
+              <a
+                href="https://www.linkedin.com/in/moira-corradini/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-contact-info"
+              >
+                <FaLinkedin size={20} className="icon" /> moira-corradini
+              </a>
+            </p>
+            <p>
+              <span className="contact-label">GitHub:</span>
+              <a
+                href="https://github.com/movi1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-contact-info"
+              >
+                <FaGithub size={20} className="icon" /> movi
+              </a>
+            </p>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

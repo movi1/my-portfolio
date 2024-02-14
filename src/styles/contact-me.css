@@ -1,85 +1,50 @@
-.main-container {
+
+
+h1, h2 {
+  color: #ddd;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+}
+
+/* Add styles to 'container-contact' class */
+.container-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   background: conic-gradient(from -47deg at 60% 50%, #02071a, #030d1d, #1d314d);
+  height: 80vh;
+
 }
 .contact-intro {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
   color: #ddd;
 }
 
-.container-contact {
-  margin-left: 60px;
-   display: flex; 
-  max-width: 100%;
-  flex-direction: row;
-  justify-content: space-between; 
-
-}
-
-.row {
-  display: flex;
-
-  margin-top: 100px;
-  padding-top: 80px; 
-  
-}
-.container-contact,
-.container-information {
-  margin-top: 100px;
-  padding-top: 80px;
-  margin-right: 50px;
+/* Add styles to 'input' and 'textarea' selectors */
+input[type=text],
+input[type=email],
+textarea {
   width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
-.contact-form,
-.contact-info {
-  padding: 20px;
-  border-radius: 5px;  
-  width: 100%;
-  max-width: 45%;
-}
-
-.contact-form {
-  background-color: #f2f2f2;  
-  flex: 1;
-  margin-right: 20px;
-
-}
-
-.contact-info {
-  background-color: #eee;
-  text-align: center;
-  flex: 1;
-  margin-left: 20px;
-  
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-}
-
-button[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 0.75rem;
-  background-color: #0d6efd;
-  color: #fff;
-  border-color: #0d6efd;
-  border-radius: 0.25rem;
-  cursor: pointer;
+/* Add styles to show 'focus' of selector */
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  border: 1px solid green;
 }
 
 .reset-button {
+
   background-color: #3a5b88;
   color: #fff;
   padding: 10px 20px;
@@ -89,20 +54,72 @@ button[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-.reset-button:hover {
-  background-color: #1d314d;
+.success-message,
+.reset-button {
+  margin-top: 20px; /* Adjust the margin as needed for spacing */
 }
-
-.success-message {
-  color: #3a5b88;
-  font-weight: bold;
+.contact-form {
+  margin: 16px;
+  padding: 16px;
+  background: #030d1d;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Add styles to 'label' selector */
+label {
   font-size: 18px;
-}
-a {
-  color: #0d6efd;
-  text-decoration: none;
+  margin-left: 10px;
+  color: #ddd;
 }
 
-a:hover {
-  text-decoration: underline; 
+
+
+/* Style 'hover' property */
+input[type=submit]:hover {
+  background: #cad8e4;
+}
+
+/* Align items to center of the 'div' with the class 'center' */
+.center {
+  text-align: center;
+}
+
+/* Use flexbox to create two columns for the form and the information */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Set the width of each column to 50% */
+.col-md-6 {
+  width: 50%;
+}
+
+/* Add some margin and padding to the information column */
+.contact-info {
+  margin: 12px;
+  padding: 12px;
+  background: #1d314d;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Add some styles to the contact labels */
+.contact-label {
+margin-right: 10px;
+color: #02071a;
+font-weight: bold;
+
+}
+
+/* Add some styles to the icons */
+.icon {
+
+  margin-right: 6px;
+ 
+}
+.link-contact-info {
+  color: #ddd;
 }

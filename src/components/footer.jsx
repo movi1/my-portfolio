@@ -5,28 +5,16 @@ import '../styles/footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer" name="footer">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-md-3">
-            <Link to="/" className="footer-brand">
-              <img
-                src="/images/logo-movi-dev.png"
-                alt="logo"
-                className="img-fluid"
-              />
-            </Link>
-          </div>
-
-          <div className="col-md-6">
-            <p className="text-center">
-              &copy; 2024 All rights reserved.
-            </p>
-          </div>
-
-          <div className="col-md-3">
-            <SocialIcons />
-          </div>
+    <footer className="bg-dark-footer text-light-footer text-center py-3">
+      <div className="footer-container">
+        <img
+          src="/images/logo-movi-dev.png"
+          alt="logo"
+          className="logo-img"
+        />
+        <p className='copyright'>&copy; 2024 All Rights Reserved.</p>
+        <div className="social-icons-container">
+          <SocialIcons />
         </div>
       </div>
     </footer>
