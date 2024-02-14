@@ -13,7 +13,6 @@ h1, h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   background: conic-gradient(from -47deg at 60% 50%, #02071a, #030d1d, #1d314d);
   height: 80vh;
 
@@ -36,16 +35,8 @@ textarea {
   resize: vertical;
 }
 
-/* Add styles to show 'focus' of selector */
-input[type=text]:focus,
-input[type=email]:focus,
-textarea:focus {
-  border: 1px solid green;
-}
-
 .reset-button {
-
-  background-color: #3a5b88;
+  background-color: #02071a;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -56,8 +47,13 @@ textarea:focus {
 
 .success-message,
 .reset-button {
-  margin-top: 20px; /* Adjust the margin as needed for spacing */
+  margin-top: 20px; 
+  text-align: center;
+
+  font-size: 25px;
+  color: #ddd;
 }
+
 .contact-form {
   margin: 16px;
   padding: 16px;
@@ -100,17 +96,18 @@ input[type=submit]:hover {
 .contact-info {
   margin: 12px;
   padding: 12px;
-  background: #1d314d;
+  /* background: #1d314d; */
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background:  linear-gradient( #040c2c, #21324b);
 
 }
 
 /* Add some styles to the contact labels */
 .contact-label {
 margin-right: 10px;
-color: #02071a;
-font-weight: bold;
+color: #cad8e4;
+/* font-weight: bold; */
 
 }
 
