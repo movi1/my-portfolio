@@ -1,4 +1,3 @@
-// Footer.js
 import React from 'react';
 import SocialIcons from './icons';
 import { Link } from 'react-router-dom';
@@ -6,21 +5,17 @@ import '../styles/footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer" name="footer">
-      <div className="container">
-        <Link to="/" className="footer-brand">
-          <img
-            src="/images/logo-movi-dev.png"
-            alt="logo"
-           
-          />
-        </Link>
-
-        <p >
-          &copy; 2024 All rights reserved.
-        </p>
-
-        <SocialIcons />
+    <footer className="bg-dark-footer text-light-footer text-center py-3">
+      <div className="footer-container">
+        <img
+          src="/images/logo-movi-dev.png"
+          alt="logo"
+          className="logo-img"
+        />
+        <p className='copyright'>&copy; 2024 All Rights Reserved.</p>
+        <div className="social-icons-container">
+          <SocialIcons />
+        </div>
       </div>
     </footer>
   );

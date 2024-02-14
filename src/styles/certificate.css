@@ -1,65 +1,85 @@
 /* certificate.css */
 
 .container-certificate {
-    text-align: center;
-    padding: 40px;
-    height: 100vh;
-  }
-  
-  .container-certificate h2 {
-    font-size: 25px;
-    font-weight: bold;
-    color: #ddd; 
-    margin-bottom: 20px; 
-    margin-top: 90px;
-  }
 
-  .row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px; /* Add space above the row */
-  }
-  
-  .col-md-4 {
-    margin-bottom: 30px; /* Increase the bottom margin for more space between columns */
-  }
-  
-  .img-fluid {
-    max-width: 80%;
-    height: auto;
-    border: 2px solid #ddd; /* Add a border for a better look */
-    border-radius: 8px; /* Round the corners of the images */
-    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
-    cursor: pointer;
-  }
-  
- 
-  
-  .box-overlay {
-    position: fixed;
-     top: 0;
-     left: 0; 
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
- 
-  }
-  
-  .box-container {
-    max-width: 50%; 
-    max-height: 100vh; 
-    
-  }
-  
-  .box-img {
-     width: 100%; 
-     height: auto;
-   
-    object-fit:contain;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+ min-height: 100vh; 
+  box-sizing: border-box; 
+
+
+
+}
+
+.col-md-4 {
+  padding: 25px;
+}
+.title {
+  text-align: center; 
+  font-size: 40px;
+  color: #ddd;
+  margin-top: 100px;
+
+
+}
+
+.container-certificate {
+  text-align: center; 
+
+}
+
+.row-certificate{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+
+}
+
+
+
+.img-fluid {
+
+  max-width: 70%;
+  height: auto;
+  border: 2px solid #ddd;
+  /* Add a border for a better look */
+  border-radius: 8px;
+  /* Round the corners of the images */
+  transition: transform 0.3s ease-in-out;
+  /* Add a smooth transition effect */
+  cursor: pointer;
+
+}
+
+
+
+.box-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+}
+
+.box-container {
+  max-width: 50%;
+  max-height: 100vh;
+
+}
+
+.box-img {
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}

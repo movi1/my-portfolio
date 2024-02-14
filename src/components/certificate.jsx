@@ -26,10 +26,13 @@ const Certificates = () => {
   };
  
   return (
+    <>
+    
     <div className="container-certificate mt-5 mb-5" name="certificate">
-      <h2 className="title"> Certificates </h2>
-
-      <div className="row">
+    <h2 className="title"> Certificates </h2>
+   
+      <div className="row-certificate">
+   
         {certificateData.map((certificate, index) => (
           <div className="col-md-4 mb-4" key={index}>
             <img
@@ -50,6 +53,7 @@ const Certificates = () => {
         />
       )}
     </div>
+    </>
   );
 };
 

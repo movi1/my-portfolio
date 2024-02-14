@@ -1,40 +1,50 @@
-.container {
-  min-height: 100vh;
-}
-.contact-intro {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
+
+
+h1, h2 {
   color: #ddd;
-}
-.contact-form {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.form-group {
-  margin-bottom: 20px;
-}
-.form-group label {
-font-weight:bold;
-font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-button {
-  background-color: #1d314d;
-  color: #fff;
-  padding: 8px 10px;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Add styles to 'container-contact' class */
+.container-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: conic-gradient(from -47deg at 60% 50%, #02071a, #030d1d, #1d314d);
+  height: 80vh;
+
 }
-button:hover {
-  background-color: #3a5b88;
+.contact-intro {
+  color: #ddd;
+}
+
+/* Add styles to 'input' and 'textarea' selectors */
+input[type=text],
+input[type=email],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/* Add styles to show 'focus' of selector */
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  border: 1px solid green;
 }
 
 .reset-button {
+
   background-color: #3a5b88;
   color: #fff;
   padding: 10px 20px;
@@ -44,32 +54,72 @@ button:hover {
   transition: background-color 0.3s ease;
 }
 
-.reset-button:hover {
-  background-color: #1d314d;
+.success-message,
+.reset-button {
+  margin-top: 20px; /* Adjust the margin as needed for spacing */
 }
-
-.success-message {
-  color: #3a5b88;
-  font-weight: bold;
+.contact-form {
+  margin: 16px;
+  padding: 16px;
+  background: #030d1d;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Add styles to 'label' selector */
+label {
   font-size: 18px;
-}
-
-.contact-info h2 {
-  font-size: 24px;
-text-align: center;
-  color: #f4f4f4;
+  margin-left: 10px;
+  color: #ddd;
 }
 
 
+
+/* Style 'hover' property */
+input[type=submit]:hover {
+  background: #cad8e4;
+}
+
+/* Align items to center of the 'div' with the class 'center' */
+.center {
+  text-align: center;
+}
+
+/* Use flexbox to create two columns for the form and the information */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Set the width of each column to 50% */
+.col-md-6 {
+  width: 50%;
+}
+
+/* Add some margin and padding to the information column */
+.contact-info {
+  margin: 12px;
+  padding: 12px;
+  background: #1d314d;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Add some styles to the contact labels */
 .contact-label {
-  margin-right: 20px;
-  color: #f4f4f4;
+margin-right: 10px;
+color: #02071a;
+font-weight: bold;
+
 }
 
-
-
-
+/* Add some styles to the icons */
 .icon {
-  margin-right: 8px;
-  vertical-align: middle;
+
+  margin-right: 6px;
+ 
+}
+.link-contact-info {
+  color: #ddd;
 }
