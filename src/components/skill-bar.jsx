@@ -1,8 +1,10 @@
 import React from 'react';
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 
 const SkillBar = ({ name, level }) => {
+  
       useEffect(() => {
     const bar = document.getElementById(name);
     bar.animate([{width: '0%'}, {width: level + '%'}], {

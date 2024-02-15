@@ -29,30 +29,45 @@ const Certificates = () => {
     <>
     
     <div className="container-certificate mt-5 mb-5" name="certificate">
-    <h2 className="title"> Certificates </h2>
-   
-      <div className="row-certificate">
-   
-        {certificateData.map((certificate, index) => (
-          <div className="col-md-4 mb-4" key={index}>
-            <img
-              src={certificate.src}
-              alt={certificate.alt}
-              className="img-fluid"
-              onClick={() => openBox(certificate.src, certificate.alt)}
-            />
-          </div>
-        ))}
-      </div>
+  <h2 className="title"> Certificates </h2>
 
-      {BoxOpen && (
-        <CertificateBox
-          src={selectedImage.src}
-          alt={selectedImage.alt}
-          onClose={closeBox}
+  <div className="row-certificate">
+    {/* First row with three certificates */}
+    {certificateData.slice(0, 3).map((certificate, index) => (
+      <div className="col-md-4 mb-4" key={index}>
+        <img
+          src={certificate.src}
+          alt={certificate.alt}
+          className="img-fluid"
+          onClick={() => openBox(certificate.src, certificate.alt)}
         />
-      )}
-    </div>
+      </div>
+    ))}
+  </div>
+
+  <div className="row-certificate">
+    {/* Second row with two certificates */}
+    {certificateData.slice(3).map((certificate, index) => (
+      <div className="col-md-4 mb-4" key={index + 3}>
+        <img
+          src={certificate.src}
+          alt={certificate.alt}
+          className="img-fluid"
+          onClick={() => openBox(certificate.src, certificate.alt)}
+        />
+      </div>
+    ))}
+  </div>
+
+  {BoxOpen && (
+    <CertificateBox
+      src={selectedImage.src}
+      alt={selectedImage.alt}
+      onClose={closeBox}
+    />
+  )}
+</div>
+
     </>
   );
 };

@@ -1,50 +1,43 @@
+
+
+/* certificate.css */
+
 /* certificate.css */
 
 .container-certificate {
-
-  display: flex;
-  flex-direction: column;
+  background-color: rgb(6, 41, 80);
+  width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
   align-items: center;
-  /* justify-content: center; */
- min-height: 100vh; 
-  box-sizing: border-box; 
-
-
-
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .col-md-4 {
   padding: 25px;
 }
+
 .title {
-  text-align: center; 
-  font-size: 40px;
+  text-align: center;
+  font-size: 50px;
   color: #ddd;
-  margin-top: 100px;
-
-
 }
 
-.container-certificate {
-  text-align: center; 
-
-}
-
-.row-certificate{
+.row-certificate {
   display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the start of the cross axis (top) */
   justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-
-
+  margin-top: 20px;
 }
-
 
 
 .img-fluid {
 
-  max-width: 70%;
-  height: auto;
+  max-width:250px;
+  height: 170px;
   border: 2px solid #ddd;
   /* Add a border for a better look */
   border-radius: 8px;

@@ -7,10 +7,16 @@ import '../styles/navbar.css';
 
 const sections = ["about-me", "portfolio", "certificate", "contact-me"]; 
 
+
+const handleImageClick = () => {
+  console.log('Image clicked');
+  window.location.href = "/"; 
+};
+
 const CustomNavbar = () => {
   return (
     <Navbar className='navbar-custom' variant="light" expand="md">
-      <Link to="/" className="navbar-brand" name="logo">
+      <Link to="/" className="navbar-brand" name="logo" onClick={handleImageClick}>
         <img
           src="/images/logo-movi-dev.png"
           alt="logo"
