@@ -13,7 +13,7 @@ h1, h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: conic-gradient(from -47deg at 60% 50%, #02071a, #030d1d, #1d314d);
+  /* background: conic-gradient(from -47deg at 60% 50%, #02071a, #030d1d, #1d314d); */
   height: 80vh;
 
 }

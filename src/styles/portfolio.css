@@ -16,7 +16,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: conic-gradient(from -45deg at 50% 50%, #02071a, #030d1d, #0a1f3d, #030d1d, #02071a);
+  /* background: conic-gradient(from -45deg at 50% 50%, #02071a, #030d1d, #0a1f3d, #030d1d, #02071a); */
 }
 
 

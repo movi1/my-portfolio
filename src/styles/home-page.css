@@ -6,7 +6,8 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
-    background: conic-gradient(from -47deg at 60% 50%, #02071a, #030d1d, #1d314d);
+     background: conic-gradient(from -47deg at 60% 50%, #02071a, #030d1d, #1d314d);
+    
   }
   
   .container-fluid {
@@ -14,6 +15,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+   
   }
   
   .text-center {

@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import '../styles/navbar.css';
 
+
+const sections = ["about-me", "portfolio", "certificate", "contact-me"]; 
+
 const CustomNavbar = () => {
   return (
     <Navbar className='navbar-custom' variant="light" expand="md">
-      <Link to="/" className="navbar-brand">
+      <Link to="/" className="navbar-brand" name="logo">
         <img
           src="/images/logo-movi-dev.png"
           alt="logo"
@@ -17,18 +20,40 @@ const CustomNavbar = () => {
       <Navbar.Toggle aria-controls="navbar-nav" />
       <Navbar.Collapse id="navbar-nav">
         <Nav className="ml-auto">
-          <ScrollLink to="about-me" smooth duration={500} className="nav-link ">
-            About me
+        <ScrollLink 
+            to={sections[0]}
+            smooth={true}
+            duration={500}
+            className="nav-link"
+          >
+            About Me
           </ScrollLink>
-          <ScrollLink to="portfolio" smooth duration={500} className="nav-link ">
+
+          <ScrollLink
+            to={sections[1]}
+            smooth={true}  
+            duration={500}
+            className="nav-link"
+          >
             Projects
           </ScrollLink>
-          <ScrollLink to="certificate" smooth duration={500} className="nav-link ">
+
+          <ScrollLink
+            to={sections[2]}
+            smooth={true}
+            duration={500}
+            className="nav-link"
+          >
             Certificates
           </ScrollLink>
 
-          <ScrollLink to="contact-me" smooth duration={500} className="nav-link ">
-            Contact me
+          <ScrollLink
+            to={sections[3]}  
+            smooth={true}
+            duration={500}
+            className="nav-link"  
+          >
+            Contact Me
           </ScrollLink>
         </Nav>
       </Navbar.Collapse>
