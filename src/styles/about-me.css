@@ -87,3 +87,24 @@ color: #ddd;
   min-height: 100vh;
 
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .container-about {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+    width: 300px;
+  }
+
+  .programming-skills,
+  .about-content {
+    margin: 10px;
+    
+  }
+
+  .skill {
+    width: 100%;
+ 
+  }
+}
