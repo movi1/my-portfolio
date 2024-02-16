@@ -1,53 +1,91 @@
+.container-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-
-/* certificate.css */
-
-/* certificate.css */
 
 .container-certificate {
-  background-color: rgb(6, 41, 80);
-  width: 900px;
+  background-color: rgb(14, 37, 63);
+  height: 800px;
+
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-columns: repeat(3, 1fr);
+  
+  grid-template-rows: repeat(2, 1fr);
+ 
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  gap: 20px;
+
   box-sizing: border-box;
+
 }
 
-.col-md-4 {
-  padding: 25px;
-}
+ .col-md-4 {
+
+  margin: 30px;
+} 
 
 .title {
   text-align: center;
   font-size: 50px;
   color: #ddd;
+  position: relative;
+  display: inline-block;
+
+  /* Gradient animation */
+  background: linear-gradient(to right, #5dd6f5, #f705d6);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 5s linear infinite alternate; /* Alternate direction on each iteration */
+
+  /* Hover effect */
+  transition: transform 0.3s ease-in-out;
 }
+
+/* Gradient animation keyframes */
+@keyframes shine {
+  0% {
+    background-position: -150% center; /* Initial state */
+  }
+  100% {
+    background-position: 100% center; /* Final state */
+  }
+}
+
+/* Hover effect */
+.title:hover {
+  transform: scale(1.1);
+}
+
 
 .row-certificate {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: flex-start; /* Align items to the start of the cross axis (top) */
+  flex-direction: column;
+  /* Stack items vertically */
+  align-items: flex-start;
+  /* Align items to the start of the cross axis (top) */
   justify-content: space-around;
   margin-top: 20px;
-}
 
+}
 
 .img-fluid {
-
-  max-width:250px;
-  height: 170px;
-  border: 2px solid #ddd;
-  /* Add a border for a better look */
+  max-width: 300px;
+  height: 200px;
+  border: 4px solid #030d1d;
   border-radius: 8px;
-  /* Round the corners of the images */
+  background-color: #141b2d; /* Add a background color */
   transition: transform 0.3s ease-in-out;
-  /* Add a smooth transition effect */
   cursor: pointer;
 
+  /* Volume effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adjust the shadow properties as needed */
 }
-
 
 
 .box-overlay {
@@ -61,18 +99,24 @@
   align-items: center;
   justify-content: center;
   z-index: 999;
-
 }
 
 .box-container {
   max-width: 50%;
   max-height: 100vh;
-
 }
 
 .box-img {
   width: 100%;
   height: auto;
-
   object-fit: contain;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .container-certificate {
+    width: 100%;
+    grid-template-columns: 1fr; /* One column for small screens */
+    grid-template-rows: auto; /* Auto height for small screens */
+  }
 }
