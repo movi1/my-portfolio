@@ -23,10 +23,10 @@ function App() {
       <CustomNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/about-me" element={<AboutMe />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/about-me" element={<AboutMe />} />
+         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/certificate" element={<Certificates />} />
-        <Route path="/contact-me" element={ <ContactForm />} /> */}
+        <Route path="/contact-me" element={ <ContactForm />} />
       </Routes>
       <Footer />
     </BrowserRouter>

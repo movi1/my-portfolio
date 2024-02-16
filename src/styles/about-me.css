@@ -1,5 +1,5 @@
 .container-about{
-/* height: 100vh; */
+height: 100vh;
   margin: 0 auto;  
   display: flex;
   gap: 30px;
@@ -12,13 +12,16 @@ h1 {
   color: #ddd;
 }
 .programming-skills {
-  /* background: linear-gradient(to right,  #02071a, #294d7e);  */
-  background: conic-gradient(from -45deg at 50% 50%, #02071a, #030d1d, #0a1f3d, #030d1d, #02071a);
+
+  /* background: conic-gradient(from -45deg at 50% 50%, #02071a, #030d1d, #0a1f3d, #030d1d, #02071a); */
+  background: conic-gradient(from -45deg at 50% 50%, #02203a, #032d50, #065081, #032d50, #02203a);
+
+
   border-radius: 10px;
   flex: 1;
   padding-top: 80px; 
   margin: 50px;
-  min-height: 100vh;
+ 
 }
 
 

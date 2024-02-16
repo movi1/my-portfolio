@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import certificateData from'./certificate-data';
+import certificateData from './certificate-data';
 import '../styles/certificate.css';
 
 const CertificateBox = ({ src, alt, onClose }) => {
@@ -24,35 +24,50 @@ const Certificates = () => {
   const closeBox = () => {
     setBoxOpen(false);
   };
- 
+
   return (
     <>
-    
-    <div className="container-certificate mt-5 mb-5" name="certificate">
-    <h2 className="title"> Certificates </h2>
-   
-      <div className="row-certificate">
-   
-        {certificateData.map((certificate, index) => (
-          <div className="col-md-4 mb-4" key={index}>
-            <img
-              src={certificate.src}
-              alt={certificate.alt}
-              className="img-fluid"
-              onClick={() => openBox(certificate.src, certificate.alt)}
-            />
-          </div>
-        ))}
-      </div>
+      <div className='container-box'>
+        <div className="container-certificate mt-5 mb-5" name="certificate">
 
-      {BoxOpen && (
-        <CertificateBox
-          src={selectedImage.src}
-          alt={selectedImage.alt}
-          onClose={closeBox}
-        />
-      )}
-    </div>
+
+          <div className="row-certificate">
+            {/* First row with three certificates */}
+            {certificateData.slice(0, 3).map((certificate, index) => (
+              <div className="col-md-4 mb-4" key={index}>
+                <img
+                  src={certificate.src}
+                  alt={certificate.alt}
+                  className="img-fluid"
+                  onClick={() => openBox(certificate.src, certificate.alt)}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="row-certificate">
+            {/* Second row with two certificates */}
+            {certificateData.slice(3, 5).map((certificate, index) => (
+              <div className="col-md-4 mb-4" key={index}>
+                <img
+                  src={certificate.src}
+                  alt={certificate.alt}
+                  className="img-fluid"
+                  onClick={() => openBox(certificate.src, certificate.alt)}
+                />
+              </div>
+            ))}
+          </div>
+          <h2 className="title"> Certificates </h2>
+          {BoxOpen && (
+            <CertificateBox
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              onClose={closeBox}
+            />
+          )}
+        </div>
+      </div>
     </>
   );
 };

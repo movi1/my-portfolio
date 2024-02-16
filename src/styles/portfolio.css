@@ -120,7 +120,7 @@
   text-align: center;
   border-radius: 8px;
   margin-left: 250px;
-  background: radial-gradient( #030d1d, #1e3d69, #082149, #02071a);
+  background: linear-gradient(to right,  #02071a, #294d7e); 
 
 
 
@@ -134,7 +134,7 @@
   margin-left: 250px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 8px 4px 8px rgba(  0.897,0.5,5, 29,);
-  background: radial-gradient(rgba(3, 13, 29, 0.6), rgba(10, 31, 61, 0.5), rgba(3, 13, 29, 0.5), rgba(2, 7, 26, 0.5));
+  background: linear-gradient(to right,  #02071a, #294d7e); 
 
 
 }
@@ -145,13 +145,43 @@
   font-size: 20px;
 }
 
-.project-title {
 
+
+.project-title {
+  text-align: center;
   font-size: 25px;
   color: #ddd;
   margin-top: 50px;
+  position: relative;
+  display: inline-block;
 
+  /* Gradient animation */
+  background: linear-gradient(to right, #5dd6f5, #f705d6);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 5s linear infinite alternate; /* Alternate direction on each iteration */
+
+  /* Hover effect */
+  transition: transform 0.3s ease-in-out;
 }
+
+/* Gradient animation keyframes */
+@keyframes shine {
+  0% {
+    background-position: -150% center; /* Initial state */
+  }
+  100% {
+    background-position: 100% center; /* Final state */
+  }
+}
+
+/* Hover effect */
+.title:hover {
+  transform: scale(1.1);
+}
+
 
 
 .project-details {
