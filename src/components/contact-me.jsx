@@ -18,9 +18,9 @@ function ContactForm() {
 
 
   return (
-    <div className="container-contact" name="contact-me">
+    <div className="container-fluid container-contact" name="contact-me">
       <div className="row">
-        <div className="col-md-6 col-12">
+        <div className="col-md-6 col-12 mb-4">
           {/* Form Fields */}
           <h1>Contact me</h1>
           <p className="contact-intro">
@@ -87,7 +87,7 @@ function ContactForm() {
         </div>
 
         {/* Contact Information Section */}
-        <div className="col-md-6 col-12 mt-md-0 mt-4">
+        <div className="col-md-6 col-12 mt-md-0 mt-4 mb-4">
           <div className="contact-info">
             <h2>Contact Information</h2>
             <p>

@@ -27,11 +27,9 @@ const Certificates = () => {
 
   return (
     <>
-      <div className='container-box'>
-        <div className="container-certificate mt-5 mb-5" name="certificate">
-
-
-          <div className="row-certificate">
+ <div className="container container-box mt-4 mb-4">
+      <div className="container-certificate" name="certificate">
+        <div className="row row-certificate">
             {/* First row with three certificates */}
             {certificateData.slice(0, 3).map((certificate, index) => (
               <div className="col-md-4 mb-4" key={index}>
@@ -45,7 +43,7 @@ const Certificates = () => {
             ))}
           </div>
 
-          <div className="row-certificate">
+          <div className="row row-certificate">
             {/* Second row with two certificates */}
             {certificateData.slice(3, 5).map((certificate, index) => (
               <div className="col-md-4 mb-4" key={index}>
@@ -58,7 +56,7 @@ const Certificates = () => {
               </div>
             ))}
           </div>
-          <h2 className="title"> Certificates </h2>
+          <h2 className="title mt-5 mb-3"> Certificates </h2>
           {BoxOpen && (
             <CertificateBox
               src={selectedImage.src}
