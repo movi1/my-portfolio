@@ -4,18 +4,16 @@ import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import '../styles/navbar.css';
 
-
-const sections = ["about-me", "portfolio", "certificate", "contact-me"]; 
-
+const sections = ["about-me", "portfolio", "certificate", "contact-me"];
 
 const handleImageClick = () => {
   console.log('Image clicked');
-  window.location.href = "/"; 
+  window.location.href = "/";
 };
 
 const CustomNavbar = () => {
   return (
-    <Navbar className='navbar-custom' variant="light" expand="md">
+    <Navbar className='navbar-custom' variant="dark" expand="md">
       <Link to="/" className="navbar-brand" name="logo" onClick={handleImageClick}>
         <img
           src="/images/logo-movi-dev.png"
@@ -23,10 +21,10 @@ const CustomNavbar = () => {
           style={{ width: '100px', height: 'auto' }}
         />
       </Link>
-      <Navbar.Toggle aria-controls="navbar-nav" />
+      <Navbar.Toggle aria-controls="navbar-nav" className="custom-toggler" />
       <Navbar.Collapse id="navbar-nav" className="justify-content-end">
         <Nav className="ml-auto">
-        <ScrollLink 
+          <ScrollLink
             to={sections[0]}
             smooth={true}
             duration={500}
@@ -37,7 +35,7 @@ const CustomNavbar = () => {
 
           <ScrollLink
             to={sections[1]}
-            smooth={true}  
+            smooth={true}
             duration={500}
             className="nav-link"
           >
@@ -54,10 +52,10 @@ const CustomNavbar = () => {
           </ScrollLink>
 
           <ScrollLink
-            to={sections[3]}  
+            to={sections[3]}
             smooth={true}
             duration={500}
-            className="nav-link"  
+            className="nav-link"
           >
             Contact Me
           </ScrollLink>
@@ -68,6 +66,5 @@ const CustomNavbar = () => {
 };
 
 export default CustomNavbar;
-
 
 

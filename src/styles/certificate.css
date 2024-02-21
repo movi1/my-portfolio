@@ -8,23 +8,18 @@
 
 .container-certificate {
   background-color: rgb(14, 37, 63);
-  height: 800px;
-
+  height: auto; /* Change height to auto */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  
   grid-template-rows: repeat(2, 1fr);
- 
   align-items: center;
   justify-content: center;
   gap: 20px;
-
   box-sizing: border-box;
-
 }
 
- .col-md-4 {
 
+ .col-md-4 {
   margin: 30px;
 } 
 
@@ -34,7 +29,6 @@
   color: #ddd;
   position: relative;
   display: inline-block;
-
   /* Gradient animation */
   background: linear-gradient(to right, #5dd6f5, #f705d6);
   background-size: 200% auto;
@@ -42,7 +36,6 @@
   background-clip: text;
   -webkit-background-clip: text;
   animation: shine 5s linear infinite alternate; /* Alternate direction on each iteration */
-
   /* Hover effect */
   transition: transform 0.3s ease-in-out;
 }
@@ -75,16 +68,14 @@
 }
 
 .img-fluid {
-  max-width: 300px;
-  height: 200px;
+  min-width: 300px; 
+  height: auto;
   border: 4px solid #030d1d;
   border-radius: 8px;
-  background-color: #141b2d; /* Add a background color */
+  background-color: #141b2d;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
-
-  /* Volume effect */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adjust the shadow properties as needed */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -115,8 +106,27 @@
 /* Media query for small screens */
 @media (max-width: 768px) {
   .container-certificate {
-    width: 100%;
-    grid-template-columns: 1fr; /* One column for small screens */
-    grid-template-rows: auto; /* Auto height for small screens */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
   }
+
+  .row-certificate {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+  }
+
+
+  .col-md-4 {
+    margin: 20px;
+   
+  }
+
+  .img-fluid {
+    max-width: 200px;
+    min-width: 100px; /* Set a minimum width to avoid excessively small images */
+    height: auto;
+  }
+
 }
