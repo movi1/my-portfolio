@@ -24,7 +24,7 @@ const CustomNavbar = () => {
         />
       </Link>
       <Navbar.Toggle aria-controls="navbar-nav" />
-      <Navbar.Collapse id="navbar-nav">
+      <Navbar.Collapse id="navbar-nav" className="justify-content-end">
         <Nav className="ml-auto">
         <ScrollLink 
             to={sections[0]}
