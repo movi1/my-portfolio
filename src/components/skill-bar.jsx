@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+ import '../styles/about-me.css';
 
 
 const SkillBar = ({ name, level }) => {
