@@ -22,7 +22,7 @@ function ContactForm() {
       <div className="row">
         <div className="col-md-6 col-12 mb-4">
           {/* Form Fields */}
-          <h1>Contact me</h1>
+          <h1 className='contact-title'>Contact me</h1>
           <p className="contact-intro">
             Drop me a message through the form below!
           </p>

@@ -123,3 +123,11 @@ color: #cad8e4;
 .link-contact-info {
   color: #ddd;
 }
+
+/* Media query for screens with a maximum width of 768px */
+ @media only screen and (max-width: 768px) {
+  .contact-title {
+    font-size: 24px; 
+  }
+
+} 
