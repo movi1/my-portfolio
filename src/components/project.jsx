@@ -6,7 +6,7 @@ const Project = ({  title, technologies, description, image, link }) => {
   
   return (
 
-    <Col xs={12} sm={6} md={6} lg={6} xl={6}  className="d-flex justify-content-center align-items-center">
+    <Col xs={12} sm={6} md={6} lg={6} xl={6}  className="d-flex justify-content-center align-items-center mb-4">
 
       <div className="project">
         <div className="project-inner">

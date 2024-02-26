@@ -23,11 +23,12 @@ body {
   }
   
   .img-fluid {
-    max-width: 100%;
-    max-height: 100vh;
-    object-fit: cover;
-    position: relative;
-    z-index: 1; /* Ensure the image is above other elements */
+    min-width: 300px; 
+    height: auto;
+    border: 5px solid #030d1d;
+    border-radius: 8px;
+    z-index: 1; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     background: conic-gradient(from -47deg at 60% 50%, #02071a, #030d1d, #1d314d);
   }
   
