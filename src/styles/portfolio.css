@@ -26,6 +26,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
 .swiper-container {
@@ -33,10 +35,6 @@
   height: 60vh;
 }
 
-.project {
-  opacity: 1;
-  transition: opacity 0.5s;
-}
 
 .project:hover {
   opacity: 1;
@@ -197,50 +195,79 @@
 }
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
-  .portfolio-page {
-    padding-top: 40px; /* Adjust padding as needed */
-  }
+@media only screen and (max-width: 768px) {
 
+  /* .portfolio-page {
+    padding: 20px 20px;
+  } */
+  
   #title-portfolio {
-    font-size: 24px; /* Adjust font size as needed */
+    font-size: 24px;
   }
 
-  .swiper-container {
-    width: 90%; /* Adjust width as needed */
-    height: 70vh; /* Adjust height as needed */
+  .projects-container {
+    flex-direction: column;
+     /* align-items: stretch;  */
+   } 
+  
+  .project {
+    /* width: 100%; */
+    /* max-width: 100%;  */
+    /* margin: 0 auto 20px; */
+  }
+
+  .project-front, 
+  .project-back {
+    border-radius: 0;  
+  }
+  
+  .project-title {
+    font-size: 20px;
+    margin: 20px 0;  
+  }
+  
+  .project-link {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .project-details {
+    margin: 15px 0;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next:after  {
+    display: none;
+  }
+  
+  .swiper-pagination-bullets .swiper-pagination-bullet,
+   .swiper-pagination-horizontal.swiper-pagination-bullets ,
+   .swiper-pagination-bullet { 
+  margin: 0px;
+ }
+
+
+  
+  .technologies {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+}
+
+/* Adjust as needed for larger screens */
+@media (min-width: 769px) {
+
+  .projects-container {
+    justify-content: center;
   }
 
   .project {
-    width: 100%; /* Adjust width as needed */
-    max-width: none; /* Reset max-width if necessary */
+    width: 500px;
   }
 
-  .project-front,
-  .project-back {
-    margin-left: 0; /* Reset margin-left */
-  }
-
-  .project-title {
-    font-size: 20px; /* Adjust font size as needed */
-    margin-top: 20px; /* Adjust margin as needed */
-  }
-
-  .project-link {
-    font-size: 16px; /* Adjust font size as needed */
-    margin-top: 10px; /* Adjust margin as needed */
-  }
-
-  .project-details {
-    margin-top: 15px; /* Adjust margin as needed */
-  }
-
-  .technologies {
-    margin-top: 10px; /* Adjust margin as needed */
-    font-size: 14px; /* Adjust font size as needed */
-  }
+  
 }
-
 
 
 
