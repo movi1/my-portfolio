@@ -1,14 +1,20 @@
-import { Swiper, SwiperSlide, Navigation, Pagination } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
-import 'swiper/css/navigation';
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
+// Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 
 import projects from './projectData.jsx';
 import Project from './project.jsx';
 
 import '../styles/portfolio.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -20,26 +26,23 @@ const Portfolio = () => {
       <h1 id="title-portfolio">My Portfolio</h1>
       <div className="swiper-container">
         <Swiper
-          navigation={{
-            nextEl: '.custom-next-button',
-            prevEl: '.custom-prev-button',
-          }}
-          pagination={{
-            clickable: true,
-            renderBullet: (index, className) => {
-              return <span className={className}>🟢</span>;
-            },
-          }}
-          spaceBetween={20}
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar]}
+          spaceBetween={10}
           slidesPerView={1}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
         >
           {projects.map((project) => (
+
             <SwiperSlide key={project.id}>
-              <div className="custom-prev-button">
-                <FontAwesomeIcon icon={faArrowLeft} />
-              </div>
+
               <Project
                 title={project.title}
                 technologies={project.technologies}
@@ -47,12 +50,16 @@ const Portfolio = () => {
                 image={project.image}
                 link={project.link}
               />
-              <div className="custom-next-button">
-                <FontAwesomeIcon icon={faArrowRight} />
-              </div>
+         
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className="swiper-button-next">
+          <FontAwesomeIcon icon={faArrowRight} />
+        </div>
+        <div className="swiper-button-prev">
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </div>
       </div>
     </div>
   );

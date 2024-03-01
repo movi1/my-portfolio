@@ -1,6 +1,6 @@
-
-
-.portfolio-page {
+/* Common Styles */
+.portfolio-page,
+.project-page {
   text-align: center;
   min-height: 100vh;
   padding-top: 80px;
@@ -8,161 +8,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
-
-.swiper-container {
- 
-  width: 800px;
-  height: 60vh;
-  position: relative;
-}
-
-.custom-prev-button {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  cursor: pointer;
-  font-size: 24px;
-  color: #3498db;
-}
-
-.custom-next-button {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  cursor: pointer;
-  font-size: 24px;
-  color: #3498db;
-}
-
-.custom-prev-button:hover,
-.custom-next-button:hover {
-  color: #9e0277;
-}
-
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-
-}
-
-.project {
-  width: 100%;
-  height: 500px;
-  perspective: 1000px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 1;
-  transition: opacity 0.5s;
-}
-
-
-.swiper-pagination {
-  position: absolute;
-  margin-top: 70px;
-  /* left: 50%; */
-  transform: translateX(-50%);
-  z-index: 10;
-}
-
-
-
-
-.project .project-inner {
-  position: relative;
-}
-
-.project.swiped .project-inner {
-  transform: rotateX(0deg) translateY(-100%);
-}
-
-.project .project-inner .project-front,
-.project .project-inner .project-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  backface-visibility: hidden;
-}
-
-.project .project-inner .project-back {
-  transform: rotateX(180deg);
-}
-
-.project:hover .project-inner {
-  transform: rotateX(0deg) translateY(-100%);
-}
-
-.project-inner {
-  width: 100%;
-  height: 100%;
-  transform-origin: 50% 50%;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-  transform: rotateX(0deg) translateY(0);
-}
-
-.project img {
-  transition: transform 0.5s;
-  transform: translateY(0);
-  width: 80%;
-  height: 75%;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-
-
-.project-front,
-.project-back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.project:hover .project-back {
-  transform: rotateX(0deg) translateY(100%);
-  /* Show the back side on hover */
-}
-
-.project-front {
-  text-align: center;
-  border-radius: 8px;
-  background: linear-gradient(to right, #02071a, #294d7e);
-}
-
-.project-back {
-  transform: rotateY(180deg);
-  text-align: center;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 8px 4px 8px rgba(0.897, 0.5, 5, 29, );
-  background: linear-gradient(to right, #02071a, #294d7e);
-
-}
-
-.project-link {
-  color: #1491e4;
-  font-weight: bold;
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-
-
-.project-title {
+#title-portfolio,
+#title-project {
   text-align: center;
   font-size: 25px;
   color: #ddd;
@@ -192,102 +41,185 @@
 }
 
 /* Hover effect */
-.title:hover {
+#title-portfolio:hover,
+#title-project:hover {
   transform: scale(1.1);
 }
 
+/* Swiper Styles */
+.swiper-container {
+  width: 60%;
+  height: 60vh;
+  position: relative;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.swiper-pagination {
+  position: absolute;
+  margin-top: 70px;
+  /* left: 50%; */
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* background: #fff; */
+
+  /* Center slide content vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #333; /* Set your desired button color */
+  cursor: pointer;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+/* Optional: Add hover effect to the buttons */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #555; /* Set your desired hover color */
+}
+
+/* Styles for pagination bullets (optional) */
+/* .swiper-pagination-bullet {
+  width: 30px;
+  height: 30px;
+  background-color: #999; 
+  margin: 0 15px;
+  opacity: 0.7;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+  opacity: 1;
+} */
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between projects */
+}
+
+
+.project-container {
+  /* Adjust the width and other styles as needed */
+  max-width: 80%;
+  margin: 0 auto;
+}
+.project {
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-inner {
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform: rotateX(0deg) translateY(0);
+}
+
+/* Additional Project Styles */
+.project-image {
+  transition: transform 0.5s;
+  transform: translateY(0);
+  width: 80%;
+  /* Ensure the image takes up the full width of its container */
+  height: 70%;
+  /* Set a fixed height for the images */
+  object-fit: cover;
+  /* Preserve the aspect ratio while covering the entire container */
+  border-radius: 8px;
+}
+.project-front,
+.project-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  text-align: center;
+  /* Remove margin-left: 250px; */
+  /* Remove unnecessary styles or adjust as needed */
+}
+
+
+.project:hover .project-back {
+  transform: rotateX(0deg) translateY(100%);
+  /* Show the back side on hover */
+}
+
+
+.project-front {
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 250px;
+  background: linear-gradient(to right, #02071a, #294d7e);
+
+
+
+}
+
+.project-back {
+  transform: rotateY(180deg);
+  text-align: center;
+
+  border-radius: 8px;
+  margin-left: 250px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 8px 4px 8px rgba(0.897, 0.5, 5, 29, );
+  background: linear-gradient(to right, #02071a, #294d7e);
+
+
+}
+
+.project-link {
+  color: #1491e4;
+  font-weight: bold;
+  font-size: 16px; /* Adjust font size as needed */
+  margin-top: 10px; /* Adjust margin as needed */
+}
 
 .project-details {
-  /* margin-top: 15px; */
+  margin-top: 25px;
   font-size: 15px;
   color: #ddd;
-  line-height: 20px;
+  line-height: 25px;
 
 }
 
 .technologies {
   font-size: 15px;
   color: #ddd;
-}
-
-/* Hide default icons */
-.swiper-button-prev::after,F
-.swiper-button-next::after {
-  display: none;
-}
-
-
-
-/* Media query for smaller screens */
-@media only screen and (max-width: 768px) {
-
-  .swiper-container {
-    height: 50vh;
-  }
-
-
-  #title-portfolio {
-    font-size: 24px;
-  }
-
-
-  .project-title {
-    font-size: 20px;
-    margin: 15px 0;
-  }
-
-  .project-link {
-    font-size: 14px;
-   
-  }
-
-  .project-details {
-    margin: 15px 0;
-  }
-
-  .technologies {
-    margin: 5px 0;
-    font-size: 13px;
-  }
-
-
-  .swiper-pagination {
-    height: 10px;
-  }
-
-  .swiper-container .swiper-pagination-bullet {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-  }
-
-
-
-
-}
-/* Adjust as needed for larger screens */
-@media (min-width: 769px) {
-  .projects-container {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .swiper-container {
-    width: 80%; /* Adjust width as needed */
-    margin: 0 auto; /* Center the container */
-  }
-
-  .swiper-pagination {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Center vertically */
-    margin-top: 10px;
-  }
-
-  .swiper-container .swiper-pagination-bullet {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-  }
 }
