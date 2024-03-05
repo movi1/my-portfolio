@@ -1,23 +1,31 @@
-/* Portfolio Page Styles */
 .portfolio-page {
+  text-align: center;
   min-height: 100vh;
-  padding: 50px 0;
- }
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
 
- #title-portfolio {
+#title-portfolio {
   text-align: center;
   font-size: 25px;
   color: #ddd;
-  margin-top: 20px;
+  margin-top: 50px;
   position: relative;
   display: inline-block;
+
   /* Gradient animation */
   background: linear-gradient(to right, #5dd6f5, #f705d6);
   background-size: 200% auto;
   color: transparent;
+   text-shadow: 2px 1px   #224270;
   background-clip: text;
   -webkit-background-clip: text;
   animation: shine 5s linear infinite alternate;
+
   /* Hover effect */
   transition: transform 0.3s ease-in-out;
 }
@@ -33,147 +41,166 @@
   }
 }
 
-/* Hover effect */
-#title-portfolio:hover,
-#title-project:hover {
-  transform: scale(1.1);
+
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between projects */
 }
- 
 
- 
- .row {
-  position: relative;
- }
- 
- .swiper-button-next,
- .swiper-button-prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  color: #333;
-  font-size: 24px;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
- }
- 
- .swiper-button-next:hover,
- .swiper-button-prev:hover {
-  background-color: rgba(255, 255, 255, 1);
- }
- 
- .swiper-button-next {
-  right: -20px;
- }
- 
- .swiper-button-prev {
-  left: -20px;
- }
- 
- @media (max-width: 767px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
-  }
- }
-
- /* Project Container Styles */
-.project-container {
-  width: 100%;
-  height: 100%;
+.project {
+  width: 500px;
+  height: 500px;
   perspective: 1000px;
- }
- 
- .project {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.project:hover {
+  opacity: 1;
+}
+
+.swiper-container {
+  width: 60%;
+  height: 60vh;
+}
+
+
+.project .project-inner {
+  position: relative;
+}
+
+.project.swiped .project-inner {
+  transform: rotateX(0deg) translateY(-100%);
+}
+
+.project .project-inner .project-front,
+.project .project-inner .project-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+}
+
+.project .project-inner .project-back {
+  transform: rotateX(180deg);
+}
+
+.project:hover .project-inner {
+  transform: rotateX(0deg) translateY(-100%);
+}
+
+.project-inner {
   width: 100%;
   height: 100%;
-  transition: transform 0.8s;
+  transform-origin: 50% 50%;
   transform-style: preserve-3d;
- }
- 
- .project-inner {
-  position: relative;
+  transition: transform 0.5s;
+  transform: rotateX(0deg) translateY(0);
+}
+
+
+
+.project-front,
+.project-back {
   width: 100%;
   height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 8px;
   text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
- }
- 
- /* Project Front Styles */
- .project-front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 20px;
- }
- 
- .project-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
- }
- 
- .technologies {
-  font-size: 16px;
-  color: #777;
-  margin-bottom: 20px;
- }
- 
- .project-image {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
- }
- 
- /* Project Back Styles */
- .project-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: #333;
-  color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 20px;
+
+}
+
+
+.project:hover .project-back {
+  transform: rotateX(0deg) translateY(100%);
+  /* Show the back side on hover */
+}
+
+
+
+
+.project img {
+  transition: transform 0.5s;
+  transform: translateY(0);
+  width: 80%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.project-front {
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 250px;
+  background: linear-gradient(to right, #02071a, #294d7e);
+
+
+
+}
+
+.project-back {
   transform: rotateY(180deg);
- }
- 
- #title-project {
-  font-size: 24px;
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 250px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 8px 4px 8px rgba(0.897, 0.5, 5, 29, );
+  background: linear-gradient(to right, #02071a, #294d7e);
+
+
+}
+
+.project-link {
+  color: #1491e4;
   font-weight: bold;
-  margin-bottom: 10px;
- }
- 
- .project-details {
-  font-size: 16px;
-  margin-bottom: 20px;
- }
- 
- .project-link {
+  font-size: 16px; 
+  margin-top: 10px; 
+}
+
+
+.project-title {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 50px;
+  position: relative;
   display: inline-block;
-  background-color: #fff;
-  color: #333;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
- }
- 
- .project-link:hover {
-  background-color: #e6e6e6;
- }
- 
- /* Hover Effect */
- .project:hover .project-inner {
-  transform: rotateY(180deg);
- }
+  background:  #396097;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 10px;
+  letter-spacing: 2px;
+  text-shadow: 2px 1px   #020614;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-title:hover {
+  transform: scale(1.1); /* Add a subtle scale effect on hover */
+}
+
+
+
+
+.project-details {
+  margin-top: 25px;
+  font-size: 15px;
+  color: #ddd;
+  line-height: 25px;
+
+}
+
+.technologies {
+  font-size: 15px;
+  color: #ddd;
+}

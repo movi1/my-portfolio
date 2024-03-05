@@ -1,14 +1,8 @@
-import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import React, {useRef} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-
-// Import Swiper styles
-import 'swiper/css';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
+import 'swiper/css';
 
 import projects from './projectData.jsx';
 import Project from './project.jsx';
@@ -16,49 +10,35 @@ import Project from './project.jsx';
 import '../styles/portfolio.css';
 
 
-
-
-
-
 const Portfolio = () => {
+ 
+
   return (
-    <div className="container-fluid portfolio-page d-flex justify-content-center align-items-center" name="portfolio">
+    <div className="portfolio-page d-flex justify-content-center align-items-center" name="portfolio">
       <h1 id="title-portfolio">My Portfolio</h1>
-      <div className="row">
-        <div className="col-12">
-          <Swiper
-         
-            modules={[Navigation, Pagination]}
-            spaceBetween={10}
-            slidesPerView={1}
-            navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            }}
-            pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
-          >
-            {projects.map((project) => (
-              <SwiperSlide key={project.id}>
-                <Project
-                  title={project.title}
-                  technologies={project.technologies}
-                  description={project.description}
-                  image={project.image}
-                  link={project.link}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="swiper-button-next">
-            <FontAwesomeIcon icon={faArrowRight} />
-          </div>
-          <div className="swiper-button-prev">
-            <FontAwesomeIcon icon={faArrowLeft} />
-          </div>
-        </div>
-      </div>
+      <Swiper
+        modules={[Navigation, Pagination]}
+        navigation
+        pagination={{ clickable: true }}
+        spaceBetween={20}
+        slidesPerView={1}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
+        className="swiper-container"
+      >
+        {projects.map((project) => (
+          <SwiperSlide key={project.id}>
+            <Project
+              title={project.title}
+              technologies={project.technologies}
+              description={project.description}
+              image={project.image}
+              link={project.link}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+   
     </div>
   );
 };
