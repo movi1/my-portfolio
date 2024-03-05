@@ -1,17 +1,10 @@
-/* Common Styles */
-.portfolio-page,
-.project-page {
-  text-align: center;
+/* Portfolio Page Styles */
+.portfolio-page {
   min-height: 100vh;
-  padding-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+  padding: 50px 0;
+ }
 
-#title-portfolio,
-#title-project {
+ #title-portfolio {
   text-align: center;
   font-size: 25px;
   color: #ddd;
@@ -45,181 +38,142 @@
 #title-project:hover {
   transform: scale(1.1);
 }
+ 
 
-/* Swiper Styles */
-.swiper-container {
-  width: 60%;
-  height: 60vh;
+ 
+ .row {
   position: relative;
-  margin-top: 20px; /* Adjust as needed */
-}
-
-.swiper-pagination {
-  position: absolute;
-  margin-top: 70px;
-  /* left: 50%; */
-  transform: translateX(-50%);
-  z-index: 10;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  /* background: #fff; */
-
-  /* Center slide content vertically and horizontally */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
+ }
+ 
+ .swiper-button-next,
+ .swiper-button-prev {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 10;
+  color: #333;
   font-size: 24px;
-  color: #333; /* Set your desired button color */
   cursor: pointer;
-}
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+ }
+ 
+ .swiper-button-next:hover,
+ .swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 1);
+ }
+ 
+ .swiper-button-next {
+  right: -20px;
+ }
+ 
+ .swiper-button-prev {
+  left: -20px;
+ }
+ 
+ @media (max-width: 767px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+ }
 
-.swiper-button-next {
-  right: 10px;
-}
-
-.swiper-button-prev {
-  left: 10px;
-}
-
-/* Optional: Add hover effect to the buttons */
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: #555; /* Set your desired hover color */
-}
-
-/* Styles for pagination bullets (optional) */
-/* .swiper-pagination-bullet {
-  width: 30px;
-  height: 30px;
-  background-color: #999; 
-  margin: 0 15px;
-  opacity: 0.7;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #fff;
-  opacity: 1;
-} */
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  display: none;
-}
-
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 20px; /* Adjust the gap between projects */
-}
-
-
+ /* Project Container Styles */
 .project-container {
-  /* Adjust the width and other styles as needed */
-  max-width: 80%;
-  margin: 0 auto;
-}
-.project {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   perspective: 1000px;
+ }
+ 
+ .project {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.project-inner {
   width: 100%;
   height: 100%;
-  transform-origin: 50% 50%;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
-  transition: transform 0.5s;
-  transform: rotateX(0deg) translateY(0);
-}
-
-/* Additional Project Styles */
-.project-image {
-  transition: transform 0.5s;
-  transform: translateY(0);
-  width: 80%;
-  /* Ensure the image takes up the full width of its container */
-  height: 70%;
-  /* Set a fixed height for the images */
-  object-fit: cover;
-  /* Preserve the aspect ratio while covering the entire container */
-  border-radius: 8px;
-}
-.project-front,
-.project-back {
+ }
+ 
+ .project-inner {
+  position: relative;
   width: 100%;
   height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+ }
+ 
+ /* Project Front Styles */
+ .project-front {
   position: absolute;
+  width: 100%;
+  height: 100%;
   backface-visibility: hidden;
-  border-radius: 8px;
-  text-align: center;
-  /* Remove margin-left: 250px; */
-  /* Remove unnecessary styles or adjust as needed */
-}
-
-
-.project:hover .project-back {
-  transform: rotateX(0deg) translateY(100%);
-  /* Show the back side on hover */
-}
-
-
-.project-front {
-  text-align: center;
-  border-radius: 8px;
-  margin-left: 250px;
-  background: linear-gradient(to right, #02071a, #294d7e);
-
-
-
-}
-
-.project-back {
-  transform: rotateY(180deg);
-  text-align: center;
-
-  border-radius: 8px;
-  margin-left: 250px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 8px 4px 8px rgba(0.897, 0.5, 5, 29, );
-  background: linear-gradient(to right, #02071a, #294d7e);
-
-
-}
-
-.project-link {
-  color: #1491e4;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+ }
+ 
+ .project-title {
+  font-size: 24px;
   font-weight: bold;
-  font-size: 16px; /* Adjust font size as needed */
-  margin-top: 10px; /* Adjust margin as needed */
-}
-
-.project-details {
-  margin-top: 25px;
-  font-size: 15px;
-  color: #ddd;
-  line-height: 25px;
-
-}
-
-.technologies {
-  font-size: 15px;
-  color: #ddd;
-}
+  margin-bottom: 10px;
+ }
+ 
+ .technologies {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 20px;
+ }
+ 
+ .project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+ }
+ 
+ /* Project Back Styles */
+ .project-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transform: rotateY(180deg);
+ }
+ 
+ #title-project {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+ }
+ 
+ .project-details {
+  font-size: 16px;
+  margin-bottom: 20px;
+ }
+ 
+ .project-link {
+  display: inline-block;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+ }
+ 
+ .project-link:hover {
+  background-color: #e6e6e6;
+ }
+ 
+ /* Hover Effect */
+ .project:hover .project-inner {
+  transform: rotateY(180deg);
+ }

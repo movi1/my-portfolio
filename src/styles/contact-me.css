@@ -125,7 +125,7 @@ input[type=submit]:hover {
 }
 
 /* Media query for screens with a maximum width of 768px */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .contact-title {
     font-size: 30px;
     margin-top: 50px;

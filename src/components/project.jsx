@@ -17,7 +17,7 @@ const Project = ({ title, technologies, description, image, link }) => {
               </div>
             </div>
             <div className="project-back">
-              <h2 className="project-title">{title}</h2>
+              <h2 id="title-project">{title}</h2>
               <div className="technologies">{technologies}</div>
               <p className="project-details">{description}</p>
               <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">

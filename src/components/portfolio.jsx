@@ -22,43 +22,41 @@ import '../styles/portfolio.css';
 
 const Portfolio = () => {
   return (
-    <div className="portfolio-page d-flex justify-content-center align-items-center" name="portfolio">
+    <div className="container-fluid portfolio-page d-flex justify-content-center align-items-center" name="portfolio">
       <h1 id="title-portfolio">My Portfolio</h1>
-      <div className="swiper-container">
-        <Swiper
-          // install Swiper modules
-          modules={[Navigation, Pagination, Scrollbar]}
-          spaceBetween={10}
-          slidesPerView={1}
-          navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          }}
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
-        >
-          {projects.map((project) => (
-
-            <SwiperSlide key={project.id}>
-
-              <Project
-                title={project.title}
-                technologies={project.technologies}
-                description={project.description}
-                image={project.image}
-                link={project.link}
-              />
+      <div className="row">
+        <div className="col-12">
+          <Swiper
          
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <div className="swiper-button-next">
-          <FontAwesomeIcon icon={faArrowRight} />
-        </div>
-        <div className="swiper-button-prev">
-          <FontAwesomeIcon icon={faArrowLeft} />
+            modules={[Navigation, Pagination]}
+            spaceBetween={10}
+            slidesPerView={1}
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}
+            pagination={{ clickable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log('slide change')}
+          >
+            {projects.map((project) => (
+              <SwiperSlide key={project.id}>
+                <Project
+                  title={project.title}
+                  technologies={project.technologies}
+                  description={project.description}
+                  image={project.image}
+                  link={project.link}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="swiper-button-next">
+            <FontAwesomeIcon icon={faArrowRight} />
+          </div>
+          <div className="swiper-button-prev">
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </div>
         </div>
       </div>
     </div>
