@@ -1,3 +1,4 @@
+/* Base Styles (Small Screen) */
 .portfolio-page {
   text-align: center;
   min-height: 100vh;
@@ -6,14 +7,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
 #title-portfolio {
-  text-align: center;
-  font-size: 25px;
+  font-size: 35px;
   color: #ddd;
-  margin-top: 50px;
+  margin-top: 60px;
   position: relative;
   display: inline-block;
 
@@ -21,7 +20,7 @@
   background: linear-gradient(to right, #5dd6f5, #f705d6);
   background-size: 200% auto;
   color: transparent;
-   text-shadow: 2px 1px   #224270;
+  text-shadow: 2px 1px #224270;
   background-clip: text;
   -webkit-background-clip: text;
   animation: shine 5s linear infinite alternate;
@@ -41,21 +40,18 @@
   }
 }
 
-
-
 .projects-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 20px; /* Adjust the gap between projects */
+  gap: 20px; 
 }
 
 .project {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: 500px;
-  perspective: 1000px;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,10 +64,9 @@
 }
 
 .swiper-container {
-  width: 60%;
-  height: 60vh;
+  width: 100%;
+  height: 80vh;
 }
-
 
 .project .project-inner {
   position: relative;
@@ -108,8 +103,6 @@
   transform: rotateX(0deg) translateY(0);
 }
 
-
-
 .project-front,
 .project-back {
   width: 100%;
@@ -118,70 +111,57 @@
   backface-visibility: hidden;
   border-radius: 8px;
   text-align: center;
-
 }
-
 
 .project:hover .project-back {
   transform: rotateX(0deg) translateY(100%);
-  /* Show the back side on hover */
 }
-
-
-
 
 .project img {
   transition: transform 0.5s;
-  transform: translateY(0);
   width: 80%;
-  height: 70%;
+  max-width: 100%;
+  /* height: 50%; */
   object-fit: cover;
   border-radius: 8px;
 }
 
-
 .project-front {
   text-align: center;
   border-radius: 8px;
-  margin-left: 250px;
+  margin-left: 0px;
   background: linear-gradient(to right, #02071a, #294d7e);
-
-
-
 }
 
 .project-back {
   transform: rotateY(180deg);
   text-align: center;
   border-radius: 8px;
-  margin-left: 250px;
+  margin-left: 0;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 8px 4px 8px rgba(0.897, 0.5, 5, 29, );
+  box-shadow: 8px 4px 8px rgba(0.897, 0.5, 5, 29);
   background: linear-gradient(to right, #02071a, #294d7e);
-
-
 }
 
 .project-link {
   color: #1491e4;
   font-weight: bold;
-  font-size: 16px; 
-  margin-top: 10px; 
+  font-size: 20px;
+ 
 }
-
 
 .project-title {
   text-align: center;
-  font-size: 35px;
-  margin-top: 50px;
+  font-size: 23px;
+  margin-top: 40px;
   position: relative;
   display: inline-block;
-  background:  #396097;
+  background: #fff;
   -webkit-background-clip: text;
   color: transparent;
-  padding: 10px;
+  padding: 20px;
   letter-spacing: 2px;
-  text-shadow: 2px 1px   #020614;
+  text-shadow: 2px 2px #050f1d;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -189,18 +169,76 @@
   transform: scale(1.1); /* Add a subtle scale effect on hover */
 }
 
-
-
-
 .project-details {
-  margin-top: 25px;
-  font-size: 15px;
+  margin-top: 20px;
+  font-size: 16px;
   color: #ddd;
-  line-height: 25px;
-
+  line-height: 30px;
+  margin: 10px;
 }
 
 .technologies {
-  font-size: 15px;
-  color: #ddd;
+  font-size: 22px;
+  background: #fff;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow:  1px 1px #050f1d;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Media Query for Medium Screens (Portrait) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  /* .project img {
+    transition: transform 0.5s;
+    width: 70%;
+    height: 50%;
+   
+ 
+  }
+
+  .project-title {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  .technologies,
+  .project-link {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .project-details {
+    font-size: 16px;
+    margin-top: 10px;
+  } */
+}
+
+/* Media Query for Medium Screens (Landscape) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+     #title-portfolio {
+    font-size: 45px;
+   } 
+
+  
+}
+
+/* Media Query for Large Screens (Portrait and Landscape) */
+@media screen and (min-width: 1025px) {
+   /* #title-portfolio {
+    font-size: 35px;
+    margin-top: 80px;
+  } 
+
+  .project .project-inner .project-front, .project-back {
+    text-align: center;
+    border-radius: 10px;
+   
+  }
+
+
+  .technologies,
+  .project-link {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+  }  */
 }

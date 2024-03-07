@@ -6,9 +6,9 @@ const Project = ({  title, technologies, description, image, link }) => {
   
   return (
 
-    <Col xs={12} sm={6} md={6} lg={6} xl={6}  className="d-flex justify-content-center align-items-center mb-4">
+    <Col xs={12} sm={12} md={12} lg={12} xl={12}  className="d-flex justify-content-center align-items-center mb-4">
 
-      <div className="project">
+<div className="project projects-container">
         <div className="project-inner">
           <div className="project-info">
             <div className="project-front">
@@ -17,7 +17,8 @@ const Project = ({  title, technologies, description, image, link }) => {
 
 
 
-              <img src={image} alt={title} className="project-image" />
+              <img src={image} alt={title} className="project-image img-fluid" />
+
             </div>
           </div>
           <div className="project-back">
