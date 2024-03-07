@@ -29,6 +29,7 @@ const Certificates = () => {
     <>
  <div className="container container-box mt-4 mb-4">
       <div className="container-certificate" name="certificate">
+
         <div className="row row-certificate">
             {/* First row with three certificates */}
             {certificateData.slice(0, 3).map((certificate, index) => (

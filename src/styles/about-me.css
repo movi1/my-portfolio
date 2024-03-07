@@ -27,6 +27,7 @@ height: 100vh;
   justify-content: space-between;
 }
 
+/* default mobile mode css */
 .skill {
    /* background: #f4f4f4; */
    color: #f4f4f4;
@@ -36,6 +37,7 @@ height: 100vh;
    width: 30%;
    text-align: center; 
 }
+
 .skill h3 {
 font-size: 20px;
 }
@@ -90,18 +92,23 @@ color: #ddd;
  /* Media query for tablets */
 @media (min-width: 769px) and (max-width: 1024px) {
   /* Add tablet-specific styles here */
-  .portfolio-page {
-    padding-top: 60px; /* Adjust padding as needed */
+  /* .portfolio-page {
+    padding-top: 60px; 
   }
 
   #title-portfolio {
-    font-size: 28px; /* Adjust font size as needed */
+    font-size: 28px; 
   }
 
   .swiper-container {
-    width: 80%; /* Adjust width as needed */
-    height: 60vh; /* Adjust height as needed */
-  }
+    width: 80%; 
+    height: 60vh;
+  } */
+
+  /* large screen changes to skill */
+  .skill {
+    margin-bottom: 1.5rem;
+ }
 
   /* Adjust other styles as needed for tablet screens */
 }
@@ -124,5 +131,23 @@ color: #ddd;
   .skill {
     width: 100%;
  
+  }
+}
+/* Media query for medium-sized screens for the About Me section */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container-about {
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px;
+    height: auto;
+    width: 300px;
+  }
+
+  .programming-skills,
+  .about-content {
+    margin: 10px;
+  }
+
+  .skill {
+    width: 100%;
   }
 }

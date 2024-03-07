@@ -15,7 +15,7 @@ const SkillBar = ({ name, level }) => {
   }, []);
 
     return (
-     <div className="skill mb-4">
+     <div className="skill">
       <h3>{name}</h3>
       
       <div className="skill-bar" id={name}>
