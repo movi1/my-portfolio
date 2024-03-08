@@ -117,7 +117,7 @@
   transform: rotateX(0deg) translateY(100%);
 }
 
-.project img {
+.img-fluid {
   transition: transform 0.5s;
   width: 80%;
   max-width: 100%;
@@ -130,6 +130,8 @@
   text-align: center;
   border-radius: 8px;
   margin-left: 0px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 8px 4px 8px rgba(0.897, 0.5, 5, 29);
   background: linear-gradient(to right, #02071a, #294d7e);
 }
 
@@ -159,7 +161,7 @@
   background: #fff;
   -webkit-background-clip: text;
   color: transparent;
-  padding: 20px;
+  /* padding: 20px; */
   letter-spacing: 2px;
   text-shadow: 2px 2px #050f1d;
   transition: transform 0.3s ease-in-out;
@@ -188,57 +190,18 @@
 
 /* Media Query for Medium Screens (Portrait) */
 @media screen and (min-width: 576px) and (max-width: 767px) {
-  /* .project img {
-    transition: transform 0.5s;
-    width: 70%;
-    height: 50%;
-   
- 
-  }
 
-  .project-title {
-    font-size: 30px;
-    margin-top: 20px;
-  }
-
-  .technologies,
-  .project-link {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-  .project-details {
-    font-size: 16px;
-    margin-top: 10px;
-  } */
 }
 
 /* Media Query for Medium Screens (Landscape) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-     #title-portfolio {
-    font-size: 45px;
-   } 
 
   
 }
 
 /* Media Query for Large Screens (Portrait and Landscape) */
 @media screen and (min-width: 1025px) {
-   /* #title-portfolio {
-    font-size: 35px;
-    margin-top: 80px;
-  } 
-
-  .project .project-inner .project-front, .project-back {
-    text-align: center;
-    border-radius: 10px;
-   
-  }
+ 
 
 
-  .technologies,
-  .project-link {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #fff;
-  }  */
 }

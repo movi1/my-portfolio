@@ -7,7 +7,7 @@ import 'swiper/css';
 import projects from './projectData.jsx';
 import Project from './project.jsx';
 
-import '../styles/portfolio.css';
+import styles from '../styles/portfolio.css';
 
 
 const Portfolio = () => {
@@ -20,7 +20,7 @@ const Portfolio = () => {
         modules={[Navigation, Pagination]}
         navigation
         pagination={{ clickable: true }}
-        spaceBetween={20}
+        spaceBetween={20}F
         slidesPerView={1}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}

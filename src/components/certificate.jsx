@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import certificateData from './certificate-data';
-import '../styles/certificate.css';
+import styles from '../styles/certificate.css';
 
 const CertificateBox = ({ src, alt, onClose }) => {
   return (
@@ -37,7 +37,7 @@ const Certificates = () => {
                 <img
                   src={certificate.src}
                   alt={certificate.alt}
-                  className="img-fluid"
+                  className={`${styles['img-fluid']} img-fluid`}
                   onClick={() => openBox(certificate.src, certificate.alt)}
                 />
               </div>
@@ -51,7 +51,7 @@ const Certificates = () => {
                 <img
                   src={certificate.src}
                   alt={certificate.alt}
-                  className="img-fluid"
+                  className={`${styles['img-fluid']} img-fluid`}
                   onClick={() => openBox(certificate.src, certificate.alt)}
                 />
               </div>

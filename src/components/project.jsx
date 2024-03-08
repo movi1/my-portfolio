@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/portfolio.css';
+import styles from '../styles/portfolio.css';
 import { Col } from 'react-bootstrap';
 
 const Project = ({  title, technologies, description, image, link }) => {
@@ -17,7 +17,10 @@ const Project = ({  title, technologies, description, image, link }) => {
 
 
 
-              <img src={image} alt={title} className="project-image img-fluid" />
+              <img src={image}
+               alt={title} 
+               className={`${styles['img-fluid']} img-fluid`}
+              />
 
             </div>
           </div>
