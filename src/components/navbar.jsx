@@ -13,7 +13,7 @@ const handleImageClick = () => {
 
 const CustomNavbar = () => {
   return (
-    <Navbar className='navbar-custom' variant="dark" expand="md">
+    <Navbar className='navbar-custom' variant="light" expand="md">
       <Link to="/" className="navbar-brand" name="logo" onClick={handleImageClick}>
         <img
           src="/images/logo-movi-dev.png"
@@ -25,37 +25,25 @@ const CustomNavbar = () => {
       <Navbar.Collapse id="navbar-nav" className="justify-content-end">
         <Nav className="ml-auto">
           <ScrollLink
-            to={sections[0]}
-            smooth={true}
-            duration={500}
-            className="nav-link"
+            to={sections[0]} smooth={true} duration={500} className="nav-link"
           >
             About Me
           </ScrollLink>
 
           <ScrollLink
-            to={sections[1]}
-            smooth={true}
-            duration={500}
-            className="nav-link"
+            to={sections[1]} smooth={true} duration={500} className="nav-link"
           >
             Projects
           </ScrollLink>
 
           <ScrollLink
-            to={sections[2]}
-            smooth={true}
-            duration={500}
-            className="nav-link"
+            to={sections[2]} smooth={true} duration={500} className="nav-link"
           >
             Certificates
           </ScrollLink>
 
           <ScrollLink
-            to={sections[3]}
-            smooth={true}
-            duration={500}
-            className="nav-link"
+            to={sections[3]} smooth={true} duration={500} className="nav-link"
           >
             Contact Me
           </ScrollLink>

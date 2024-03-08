@@ -14,10 +14,11 @@
 }
 
 .navbar-toggler-icon {
-  background-color: #294d7e; /* Set your desired background color */
-  border-radius: 5px; /* Add border-radius for a rounded appearance */
+  background-color: #294d7e; 
+  border-radius: 5px; 
   padding: 3px; 
-  transition: background-color 0.3s ease; /* Add transition for smoother effects */
+  transition: background-color 0.3s ease; 
+  margin: 20px;
 }
 
 .navbar-nav .nav-link{
