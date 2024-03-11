@@ -68,20 +68,17 @@
   height: 80vh;
 }
 
-/* Customize Swiper Navigation Arrows */
-.swiper-button-prev,
-.swiper-button-next {
-  width: 40px;
-  height: 40px;
-  background-color: #333; /* Change the background color */
-  color: #fff; /* Change the text color */
- 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
 }
+
+
 
 /* Hover effect */
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background-color: #555; /* Change the background color on hover */
+  color: #fff; 
 }
 
 

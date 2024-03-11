@@ -1,9 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-// import 'swiper/css/navigation';
-// import 'swiper/css';
+import { TiArrowLeftOutline, TiArrowRightOutline } from "react-icons/ti";
+
+import 'swiper/css/navigation';
+import 'swiper/css';
 
 import projects from './projectData.jsx';
 import Project from './project.jsx';
@@ -12,9 +13,6 @@ import '../styles/portfolio.css';
 
 
 const Portfolio = () => {
-  const navigationPrevRef = React.useRef(null);
-  const navigationNextRef = React.useRef(null);
-
 
 
   return (
@@ -44,15 +42,22 @@ const Portfolio = () => {
             />
           </SwiperSlide>
         ))}
-        <div className="swiper-button-prev">
-          <FaChevronLeft />
+
+        <div className="swiper-button-prev custom-prev-button">
+
+          <TiArrowLeftOutline />
         </div>
-        <div className="swiper-button-next">
-          <FaChevronRight />
+
+        <div className="swiper-button-next custom-next-button">
+          <TiArrowRightOutline />
+
+
         </div>
+
       </Swiper>
 
     </div>
+
   );
 };
 

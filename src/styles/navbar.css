@@ -13,8 +13,17 @@
   filter: brightness(0) invert(1); /* Make the logo white or lighter */
 }
 
+.navbar-custom.open {
+  background-color: #02071a;
+}
+
+.custom-toggler {
+  border: 1px solid #fff;
+}
+
+
 .navbar-toggler-icon {
-  background-color: #294d7e; 
+  background-color: #fff; 
   border-radius: 5px; 
   padding: 3px; 
   transition: background-color 0.3s ease; 
@@ -22,25 +31,69 @@
 }
 
 .navbar-nav .nav-link{
-   color: #fff !important;
-  font-size: 20px;
-  margin-right: 15px;
+  color: #fff !important;
+  background: linear-gradient(to right, #02071a, #294d7e);
+  font-size: 18px;
+  align-items: center !important;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #ccc ; 
+.nav-link:hover,
+.nav-link:active {
+  background: linear-gradient(to right, #294d7e, #02071a);
+  border-radius: 5px;
+}
+ 
+/* Add this to navbar.css */
+
+.close-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 999; /* Ensure it's above the navbar */
+  display: none;
 }
 
-@media (max-width: 768px) {
+.navbar-custom.open .close-overlay {
+  display: block; /* Show the overlay when the menu is open */
+}
 
-  .navbar-nav {
-    background-color: #294d7e;
-    align-items:center;
+
+/* Media Query for Medium Screens (Portrait) */
+/* @media screen and (min-width: 576px) and (max-width: 767px) {
+
+  .navbar-toggler-icon {
+    margin: 10px;
   }
 
-  .navbar-nav .nav-link:hover {
-    color: #02071a !important; 
+  .navbar-nav .nav-link {
+    background: none;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    font-size: 18px;
   }
+
+  .nav-link:hover {
+    background: none;
+  }
+} */
+/* Media Query for Large Screens (Portrait and Landscape) */
+@media screen and (min-width: 768px) {
+ 
+  .navbar-nav .nav-link{
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    background: linear-gradient(to right, #294d7e, #02071a) ;
+    border-radius: 5px; 
+  }
+
 }

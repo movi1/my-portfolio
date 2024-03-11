@@ -1,45 +1,62 @@
-.container-about{
-height: 100vh;
-  margin: 0 auto;  
+.container-about {
+  height: 100vh;
+  margin: 0 auto;
   display: flex;
-
   padding: 40px;
- 
- 
 }
 
 
-.programming-skills {
+.about-content {
+  background: conic-gradient(from -45deg at 50% 50%, #02071a, #030d1d, #0a1f3d, #030d1d, #02071a);
+color: #ddd;
+flex: 1;
+padding-top: 30px;
+margin: 30px;
 
-  /* background: conic-gradient(from -45deg at 50% 50%, #02071a, #030d1d, #0a1f3d, #030d1d, #02071a); */
-  background: conic-gradient(from -45deg at 50% 50%, #02203a, #032d50, #065081, #032d50, #02203a);
+
+}
+
+.title-about {
+font-size: 40px;
+text-align: center;
+
+}
+
+
+
+.programming-skills {
+  background: conic-gradient(from -45deg at 50% 50%, #01101d, #02203a, #044570, #02203a, #01101d);
   border-radius: 10px;
   flex: 1;
-  padding-top: 30px; 
+  padding-top: 30px;
   margin: 30px;
- 
+
 }
 
 
 .skill-list {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 /* default mobile mode css */
 .skill {
-   /* background: #f4f4f4; */
-   color: #f4f4f4;
-   border-radius: 5px;
-   padding: 10px;
-   margin: 5px;
-   width: 30%;
-   text-align: center; 
+  /* background: #f4f4f4; */
+  color: #f4f4f4;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  width: 30%;
+  text-align: center;
+}
+
+.programming-skills h1 {
+  font-size: 30px;
 }
 
 .skill h3 {
-font-size: 20px;
+  font-size: 20px;
 }
 
 .skill-bar {
@@ -57,61 +74,28 @@ font-size: 20px;
 
 .skill-progress {
   height: 10px;
-  border-radius: 5px; 
-  background-image: linear-gradient(to right,#92067b, #f52cb8);
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #92067b, #f52cb8);
   transition: width 0.5s ease-in-out;
 }
 
- .skill-progress {
+.skill-progress {
   animation: animate-positive 2s forwards;
 }
 
 @keyframes animate-positive {
-  0% { 
-    width: 0; 
+  0% {
+    width: 0;
   }
+
   100% {
-    width: 100%; /* Replace with actual percentage */
+    width: 100%;
+    
   }
 }
 
 
-.about-content {
-color: #ddd;
-  flex: 1;  
-  padding-top: 30px; 
-  margin: 30px;
 
-
-}
- .title-about {
-  font-size: 40px;
-  text-align: center;
- 
- }
- /* Media query for tablets */
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Add tablet-specific styles here */
-  /* .portfolio-page {
-    padding-top: 60px; 
-  }
-
-  #title-portfolio {
-    font-size: 28px; 
-  }
-
-  .swiper-container {
-    width: 80%; 
-    height: 60vh;
-  } */
-
-  /* large screen changes to skill */
-  .skill {
-    margin-bottom: 1.5rem;
- }
-
-  /* Adjust other styles as needed for tablet screens */
-}
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
@@ -125,29 +109,31 @@ color: #ddd;
   .programming-skills,
   .about-content {
     margin: 10px;
-    
+
   }
 
   .skill {
     width: 100%;
- 
+
   }
 }
+
 /* Media query for medium-sized screens for the About Me section */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .container-about {
-    flex-direction: column; /* Stack items vertically */
+  /* .container-about {
+    flex-direction: column;
     padding: 10px;
     height: auto;
     width: 300px;
-  }
+  } */
 
-  .programming-skills,
+  /* .programming-skills,
   .about-content {
     margin: 10px;
   }
 
   .skill {
     width: 100%;
-  }
+    margin-bottom: 1.5rem;
+  } */
 }
