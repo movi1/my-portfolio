@@ -12,19 +12,13 @@
 .navbar-brand img {
   filter: brightness(0) invert(1); /* Make the logo white or lighter */
 }
-
-.navbar-custom.open {
-  background-color: #02071a;
+.navbar-brand {
+display: none;
 }
 
 .custom-toggler {
-  border: 1px solid #fff;
-}
+ 
 
-
-.navbar-toggler-icon {
-  background-color: #fff; 
-  border-radius: 5px; 
   padding: 3px; 
   transition: background-color 0.3s ease; 
   margin: 20px;
@@ -44,23 +38,7 @@
   background: linear-gradient(to right, #294d7e, #02071a);
   border-radius: 5px;
 }
- 
-/* Add this to navbar.css */
 
-.close-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-  z-index: 999; /* Ensure it's above the navbar */
-  display: none;
-}
-
-.navbar-custom.open .close-overlay {
-  display: block; /* Show the overlay when the menu is open */
-}
 
 
 /* Media Query for Medium Screens (Portrait) */
