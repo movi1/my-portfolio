@@ -68,6 +68,20 @@
   height: 80vh;
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+
+
+/* Hover effect */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #fff; 
+}
+
+
 .project .project-inner {
   position: relative;
 }
