@@ -13,8 +13,8 @@
   filter: brightness(0) invert(1); /* Make the logo white or lighter */
 }
 .navbar-brand {
-display: none;
-}
+  display: none;
+  }
 
 .custom-toggler {
  
@@ -40,25 +40,14 @@ display: none;
 }
 
 
+@media screen and (min-width: 576px) and (max-width: 767px) {
 
-/* Media Query for Medium Screens (Portrait) */
-/* @media screen and (min-width: 576px) and (max-width: 767px) {
 
-  .navbar-toggler-icon {
-    margin: 10px;
-  }
-
-  .navbar-nav .nav-link {
-    background: none;
-    border-bottom: 1px solid #fff;
-    text-align: center;
-    font-size: 18px;
-  }
-
-  .nav-link:hover {
-    background: none;
-  }
-} */
+    .navbar-brand {
+      display: none;
+      }
+  
+} 
 /* Media Query for Large Screens (Portrait and Landscape) */
 @media screen and (min-width: 768px) {
  
@@ -74,4 +63,7 @@ display: none;
     border-radius: 5px; 
   }
 
+  .navbar-brand {
+    display:contents;
+    }
 }

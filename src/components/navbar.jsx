@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHamburger } from '@fortawesome/free-solid-svg-icons';
 import '../styles/navbar.css';
 
-const sections = ["about-me", "portfolio", "certificate", "contact-me"];
+const sections = ["about-me", "resume", "portfolio", "certificate", "contact-me"];
 
 const handleImageClick = () => {
   console.log('Image clicked');
@@ -41,8 +41,17 @@ const CustomNavbar = () => {
             About Me
           </ScrollLink>
           <ScrollLink
-     
+            
             to={sections[1]}
+            smooth={true}
+            duration={500}
+            className="nav-link"
+          >
+            Resume
+          </ScrollLink>
+          <ScrollLink
+     
+            to={sections[2]}
             smooth={true}
             duration={500}
             className="nav-link"
@@ -51,7 +60,7 @@ const CustomNavbar = () => {
           </ScrollLink>
           <ScrollLink
         
-            to={sections[2]}
+            to={sections[3]}
             smooth={true}
             duration={500}
             className="nav-link"
@@ -60,7 +69,7 @@ const CustomNavbar = () => {
           </ScrollLink>
           <ScrollLink
         
-            to={sections[3]}
+            to={sections[4]}
             smooth={true}
             duration={500}
             className="nav-link"

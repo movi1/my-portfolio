@@ -7,6 +7,7 @@ import AboutMe from './about-me';
 import ContactForm from './contact-me';
 import Footer from './footer';
 import Certificates from './certificate';
+import Resume from './resume';
 
 const HomePage = () => {
   return (
@@ -32,6 +33,7 @@ const HomePage = () => {
 
       </div>
       <AboutMe></AboutMe>
+      <Resume></Resume>
       <Portfolio></Portfolio>
       <Certificates></Certificates>
       <ContactForm></ContactForm>
