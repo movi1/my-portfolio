@@ -61,5 +61,8 @@
   ],
   "rules": {
     "compat/compat": 2
-  }
+  },
+  "homepage": "https://myusername.github.io/my-portfolio"
+
+  
 }
