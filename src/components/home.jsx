@@ -5,7 +5,6 @@ import '../styles/home-page.css';
 import Portfolio from './portfolio';
 import AboutMe from './about-me';
 import ContactForm from './contact-me';
-import Footer from './footer';
 import Certificates from './certificate';
 import Resume from './resume';
 
