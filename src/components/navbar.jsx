@@ -24,7 +24,7 @@ const CustomNavbar = () => {
       
     >
       <Link to="/" className="navbar-brand" name="logo" onClick={handleImageClick}>
-        <img src="/images/logo-movi-dev.png" alt="logo" style={{ width: '100px', height: 'auto' }} />
+        <img src="./images/logo-movi-dev.png" alt="logo" style={{ width: '100px', height: 'auto' }} />
       </Link>
       <Navbar.Toggle aria-controls="navbar-nav" className="custom-toggler" >
         <FontAwesomeIcon icon={faHamburger} color='#fff' size='lg'/>

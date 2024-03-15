@@ -23,6 +23,8 @@ const SkillBar = ({ name, level }) => {
         }
       });
     };
+    
+
 
     // Create a new IntersectionObserver instance with the callback and options
     const observer = new IntersectionObserver(callback, options);
