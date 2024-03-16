@@ -28,11 +28,14 @@
     "swiper": "^11.0.7",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://movi1.github.io/my-portfolio/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -54,7 +57,8 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "eslint-plugin-compat": "^4.2.0"
+    "eslint-plugin-compat": "^4.2.0",
+    "gh-pages": "^6.1.1"
   },
   "plugins": [
     "compat"
