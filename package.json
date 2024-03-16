@@ -28,7 +28,6 @@
     "swiper": "^11.0.7",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://movi1.github.io/my-portfolio/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
