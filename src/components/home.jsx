@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <>
 
-      <div className="container-fluid min-vh-100 d-flex align-items-center justify-content-center bg-home" name="home">
+      <div className="container-fluid home-container min-vh-100 d-flex align-items-center justify-content-center bg-home" name="home">
         <div className="row text-center">
           <div className="col-md-6 d-flex align-items-center">
             <img

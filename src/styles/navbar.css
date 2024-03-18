@@ -18,10 +18,11 @@
 
 .custom-toggler {
  
+background-color: #ddd;
 
   padding: 3px; 
   transition: background-color 0.3s ease; 
-  margin: 20px;
+  margin: 8px;
 }
 
 .navbar-nav .nav-link{

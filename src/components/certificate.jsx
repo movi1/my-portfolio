@@ -28,36 +28,37 @@ const Certificates = () => {
   return (
     <>
  <div className="container container-box mt-4 mb-4">
-      <div className="container-certificate" name="certificate">
+ <div className="container-certificate" name="certificate">
 
-        <div className="row row-certificate">
-            {/* First row with three certificates */}
-            {certificateData.slice(0, 3).map((certificate, index) => (
-              <div className="col-md-4 mb-4" key={index}>
-                <img
-                  src={certificate.src}
-                  alt={certificate.alt}
-                  className={`${styles['img-fluid']} img-fluid`}
-                  onClick={() => openBox(certificate.src, certificate.alt)}
-                />
-              </div>
-            ))}
-          </div>
+  <h2 className="title mt-5 mb-3 order-md-3"> Certificates </h2>
+  
+  <div className="row row-certificate order-md-1">
+    {/* First row with three certificates */}
+    {certificateData.slice(0, 3).map((certificate, index) => (
+      <div className="col-md-4 mb-4" key={index}>
+        <img
+          src={certificate.src}
+          alt={certificate.alt}
+          className={`${styles['img-fluid']} img-fluid`}
+          onClick={() => openBox(certificate.src, certificate.alt)}
+        />
+      </div>
+    ))}
+  </div>
 
-          <div className="row row-certificate">
-            {/* Second row with two certificates */}
-            {certificateData.slice(3, 5).map((certificate, index) => (
-              <div className="col-md-4 mb-4" key={index}>
-                <img
-                  src={certificate.src}
-                  alt={certificate.alt}
-                  className={`${styles['img-fluid']} img-fluid`}
-                  onClick={() => openBox(certificate.src, certificate.alt)}
-                />
-              </div>
-            ))}
-          </div>
-          <h2 className="title mt-5 mb-3"> Certificates </h2>
+  <div className="row row-certificate order-md-2">
+    {/* Second row with two certificates */}
+    {certificateData.slice(3, 5).map((certificate, index) => (
+      <div className="col-md-4 mb-4" key={index}>
+        <img
+          src={certificate.src}
+          alt={certificate.alt}
+          className={`${styles['img-fluid']} img-fluid`}
+          onClick={() => openBox(certificate.src, certificate.alt)}
+        />
+      </div>
+    ))}
+  </div>
           {BoxOpen && (
             <CertificateBox
               src={selectedImage.src}
