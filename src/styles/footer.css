@@ -3,6 +3,12 @@
 .text-light-footer {
   color: #fff;
 }
+.center-content {
+  text-align: center;
+  /* background-color: rgb(14, 37, 63); */
+
+}
+
 
 .footer-container {
   display: flex;
@@ -10,6 +16,7 @@
   justify-content: center;
   align-items: center;
   gap: 15px; 
+  padding: 10px;
 
 }
 
@@ -20,21 +27,25 @@
 }
 .copyright  {
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
   margin-top: 10px;
 }
 
 .social-icons-container {
   display: flex;
+  align-items: center;
+  margin-top: 25px;
 } 
 
 
-/* Add media query for responsiveness if needed */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    margin-top: 20px;
+@media (min-width: 769px) {
+
+  .logo-img {
+    width: 60px; 
   }
 
- 
+  .copyright {
+    font-size: 16px; 
+    margin-top: 20px; 
+  }
 }

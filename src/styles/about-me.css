@@ -9,18 +9,18 @@
 
 .about-content {
   background: conic-gradient(from -45deg at 50% 50%, #02071a, #030d1d, #0a1f3d, #030d1d, #02071a);
-color: #ddd;
-flex: 1;
-padding-top: 30px;
-margin: 30px;
+  color: #ddd;
+  flex: 1;
+  padding-top: 30px;
+  margin: 30px;
 
 
 }
 
 .title-about {
   color: #ddd;
-font-size: 40px;
-text-align: center;
+  font-size: 40px;
+  text-align: center;
 
 }
 
@@ -44,7 +44,7 @@ text-align: center;
 
 /* default mobile mode css */
 .skill {
-  /* background: #f4f4f4; */
+
   color: #f4f4f4;
   border-radius: 5px;
   padding: 10px;
@@ -92,7 +92,7 @@ text-align: center;
 
   100% {
     width: 100%;
-    
+
   }
 }
 
@@ -100,20 +100,7 @@ text-align: center;
 
 /* Media query for screens larger than 768px */
 @media (min-width: 769px) {
-  /* .container-about {
-    flex-direction: column;
-    padding: 10px;
-    height: auto;
-    width: 300px;
-  } */
-
-  /* .programming-skills,
-  .about-content {
-    margin: 10px;
+  .row {
+    margin-top: 60px;
   }
-
-  .skill {
-    width: 100%;
-    margin-bottom: 1.5rem;
-  } */
 }
