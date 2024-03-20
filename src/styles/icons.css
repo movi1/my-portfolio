@@ -2,16 +2,16 @@
 
 .social-icon {
     display: flex;
-    gap: 25px; /* Adjust the gap between icons as needed */
+    gap: 20px; 
   }
   
   .social-icon a {
-    text-decoration: none; /* Remove underlines from anchor tags */
-    color: inherit; /* Inherit the color from the parent container */
+    text-decoration: none; 
+    color: inherit; 
   }
 
   .social-icon a:hover {
-    color: #ccc; /* Light gray color */
+    color: #c2c2c2;
   }
   
   

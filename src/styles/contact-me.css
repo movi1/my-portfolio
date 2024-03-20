@@ -1,23 +1,44 @@
-h1,
-h2 {
-  color: #ddd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Add styles to 'container-contact' class */
 .container-contact {
-  background-color: rgb(8, 60, 119);
-
-  background: conic-gradient(from -47deg at 60% 50%, #02071a, #030d1d, #1d314d);
+/* 
+  background: conic-gradient(from -47deg at 60% 50%, #02071a, #030d1d, #1d314d); */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background: conic-gradient(from -47deg at 60% 50%, #02071a, #030d1d, #1d314d); */
-  height: 100vh;
+  min-height: 100vh;
 
+}
+.contact-me-container{
+  margin: 12px;
+  padding: 12px;
+  background: #030d1d;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Add some margin and padding to the information column */
+.contact-info {
+  margin: 12px;
+  padding: 12px;
+  /* background: #1d314d; */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* background: linear-gradient(#040c2c, #21324b); */
+
+}
+
+.contact-title {
+  color: #ddd;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.contact-info-title {
+  color: #ddd;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-intro {
@@ -52,18 +73,10 @@ textarea {
 .reset-button {
   margin-top: 20px;
   text-align: center;
-
   font-size: 25px;
   color: #ddd;
 }
 
-.contact-form {
-  margin: 16px;
-  padding: 16px;
-  background: #030d1d;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
 /* Add styles to 'label' selector */
 label {
@@ -72,40 +85,12 @@ label {
   color: #ddd;
 }
 
-
-
 /* Style 'hover' property */
 input[type=submit]:hover {
   background: #cad8e4;
 }
 
-/* Align items to center of the 'div' with the class 'center' */
-.center {
-  text-align: center;
-}
 
-/* Use flexbox to create two columns for the form and the information */
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Set the width of each column to 50% */
-.col-md-6 {
-  width: 50%;
-}
-
-/* Add some margin and padding to the information column */
-.contact-info {
-  margin: 12px;
-  padding: 12px;
-  /* background: #1d314d; */
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(#040c2c, #21324b);
-
-}
 
 /* Add some styles to the contact labels */
 .contact-label {
@@ -120,21 +105,27 @@ input[type=submit]:hover {
   margin-right: 6px;
 }
 
-.link-contact-info {
-  color: #ddd;
-}
-
-/* Media query for screens with a maximum width of 768px */
-@media (max-width: 768px) {
-  .contact-title {
-    font-size: 30px;
-    margin-top: 50px;
-    /* margin-bottom: 30px; */
+/* Media query for screens larger than 768px */
+@media (min-width: 769px) {
+  .row-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Adjust the gap between the columns */
   }
 
-  .contact-intro {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  .contact-me-container,
+  .contact-info {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout for each section */
+    gap: 20px; /* Adjust the gap between elements */
   }
+.contact-info-title{
+  margin-top: 90px;
 }
+
+ 
+}
+
+
+

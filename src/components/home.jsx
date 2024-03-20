@@ -12,11 +12,11 @@ const HomePage = () => {
   return (
     <>
 
-      <div className="container-fluid min-vh-100 d-flex align-items-center justify-content-center bg-home" name="home">
+      <div className="container-fluid home-container min-vh-100 d-flex align-items-center justify-content-center bg-home" name="home">
         <div className="row text-center">
           <div className="col-md-6 d-flex align-items-center">
             <img
-              src="/images/movi-avatar-no-bg.png"
+              src="./images/movi-avatar-no-bg.png"
               alt="Moira Corradini"
               className="img-fluid mb-3 mx-auto"
             />

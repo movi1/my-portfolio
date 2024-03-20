@@ -19,81 +19,84 @@ function ContactForm() {
 
   return (
     <div className="container-fluid container-contact" name="contact-me">
-      <div className="row">
-        <div className="col-md-6 col-12 mb-4">
-          {/* Form Fields */}
-          <h1 className='contact-title'>Contact me</h1>
-          <p className="contact-intro">
-            Drop me a message through the form below!
-          </p>
-          <form onSubmit={handleSubmit} className="contact-form">
-            <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                className="form-control"
-                placeholder="Tell me your full name"
-              />
-              <ValidationError
-                prefix="name"
-                field="name"
-                errors={state.errors}
-              />
-            </div>
+      <div className="row-contact">
+        <div className='contact-me-container'>
+          <div className="col-12 mb-4">
+            <h1 className='contact-title'>Contact me</h1>
+            <p className="contact-intro">
+              Drop me a message through the form below!
+            </p>
+            <form onSubmit={handleSubmit} className="contact-form">
+              <div className="form-group">
+                <label htmlFor="name">Full Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  className="form-control"
+                  placeholder="Tell me your full name"
+                />
+                <ValidationError
+                  prefix="name"
+                  field="name"
+                  errors={state.errors}
+                />
+              </div>
 
-            <div className="form-group">
-              <label htmlFor="email">Email Address</label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                className="form-control"
-                placeholder="you@something.com"
-              />
-              <ValidationError
-                prefix="Email"
-                field="email"
-                errors={state.errors}
-              />
-            </div>
+              <div className="form-group">
+                <label htmlFor="email">Email Address</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  className="form-control"
+                  placeholder="you@something.com"
+                />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
+              </div>
 
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                className="form-control"
-                placeholder="Enter Your Message"
-                rows="4"
-              />
-              <ValidationError
-                prefix="Message"
-                field="message"
-                errors={state.errors}
-              />
-            </div>
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  className="form-control"
+                  placeholder="Enter Your Message"
+                  rows="4"
+                />
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                />
+              </div>
 
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={state.submitting}
-              className="btn btn-primary"
-            >
-              Submit
-            </button>
-          </form>
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={state.submitting}
+                className="btn btn-primary"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
 
         {/* Contact Information Section */}
-        <div className="col-md-6 col-12 mt-md-0 mt-4 mb-4">
-          <div className="contact-info">
-            <h2>Contact Information</h2>
+
+        <div className="contact-info">
+          
+          <div className="col-12 mb-4">
+            <h2 className='contact-info-title'>Contact Information</h2>
             <p>
               <span className="contact-label">Email:</span>
-              <a href="mailto:moiracorradini@gmail.com"  className="link-contact-info">
-             
+              <a href="mailto:moiracorradini@gmail.com" className="link-contact-info">
+
                 <FaEnvelope size={20} className="icon" /> moiracorradini@gmail.com
               </a>
             </p>

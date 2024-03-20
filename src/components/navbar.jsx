@@ -27,7 +27,7 @@ const CustomNavbar = () => {
         <img src="./images/logo-movi-dev.png" alt="logo" style={{ width: '100px', height: 'auto' }} />
       </Link>
       <Navbar.Toggle aria-controls="navbar-nav" className="custom-toggler" >
-        <FontAwesomeIcon icon={faHamburger} color='#fff' size='lg'/>
+        <FontAwesomeIcon icon={faHamburger} color='#02071a' size='lg'/>
       </Navbar.Toggle>
       <Navbar.Collapse id="navbar-nav" className="justify-content-end">
         <Nav className="ml-auto">
