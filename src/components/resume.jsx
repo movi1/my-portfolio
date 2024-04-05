@@ -17,7 +17,7 @@ const Resume = () => {
               title="Resume"
             />
             {/* Optional: Add a link to download the PDF */}
-            <a href={pdfUrl} download="Moira_Corradini_Resume.pdf" className="btn btn-primary mt-2">
+            <a href={pdfUrl} download="Moira_Corradini-cv-english-new.pdf" className="btn btn-primary mt-2">
               Download Resume
             </a>
           </div>
